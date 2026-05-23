@@ -137,4 +137,15 @@
 <!-- END: Featured Collections Section -->
 </main>
 <!-- END: Main Content -->
+<script>
+    function searchProperty() {
+      var dropdown = document.getElementById("property-dropdown");
+      var selectedPage = dropdown.value;
+      if (selectedPage) {
+        window.location.href = selectedPage;
+      } else {
+        alert("Please select a destination from the dropdown first!");
+      }
+    }
+  </script>
 </body></html>
