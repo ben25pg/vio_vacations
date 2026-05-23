@@ -64,42 +64,45 @@
 <div class="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 md:mt-48 -mb-20">
 <div class="bg-white/95 backdrop-blur-md rounded-xl p-4 md:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
 <form class="flex flex-col md:flex-row gap-4 items-end md:items-center">
-<!-- Destination Input -->
-<div class="w-full md:w-1/3 flex flex-col">
-<label class="sr-only" for="destination">Destination</label>
-<div class="relative rounded-md shadow-sm border border-gray-300 bg-white">
-<input class="focus:ring-black focus:border-black block w-full pl-4 pr-10 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0" id="destination" name="destination" placeholder="Destination" type="text"/>
-<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-<i class="fa-solid fa-chevron-down text-gray-400 text-sm"></i>
-</div>
-</div>
-</div>
-<!-- Dates Input -->
-<div class="w-full md:w-1/4 flex flex-col">
-<label class="sr-only" for="dates">Dates</label>
-<div class="relative rounded-md shadow-sm border border-gray-300 bg-white">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<i class="fa-regular fa-calendar text-gray-400"></i>
-</div>
-<input class="focus:ring-black focus:border-black block w-full pl-10 pr-3 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0" id="dates" name="dates" placeholder="Dates" type="text"/>
-</div>
-</div>
-<!-- Guests Input -->
-<div class="w-full md:w-1/4 flex flex-col">
-<label class="sr-only" for="guests">Guests</label>
-<div class="relative rounded-md shadow-sm border border-gray-300 bg-white">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-<i class="fa-regular fa-user text-gray-400"></i>
-</div>
-<input class="focus:ring-black focus:border-black block w-full pl-10 pr-3 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0" id="guests" name="guests" placeholder="Guests" type="text"/>
-</div>
-</div>
-<!-- Submit Button -->
-<div class="w-full md:w-auto">
-<button class="w-full md:w-auto flex items-center justify-center px-8 py-3 border border-gray-800 shadow-sm text-sm font-medium rounded-md text-gray-900 bg-transparent hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 uppercase tracking-wide" type="submit">
-                Check Availability
-              </button>
-</div>
+  <div class="w-full md:w-1/3 flex flex-col">
+    <label class="sr-only" for="destination">Destination</label>
+    <div class="relative rounded-md shadow-sm border border-gray-300 bg-white">
+      <select class="focus:ring-black focus:border-black block w-full pl-4 pr-10 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0 appearance-none cursor-pointer" id="property-dropdown" name="destination">
+        <option value="" disabled selected>Select a Destination...</option>
+        <option value="tenkiller.html">Lake Tenkiller Retreats</option>
+        <option value="pcb.html">PCB Coastal Luxury</option>
+      </select>
+      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+        <i class="fa-solid fa-chevron-down text-gray-400 text-sm"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/4 flex flex-col opacity-60">
+    <label class="sr-only" for="dates">Dates</label>
+    <div class="relative rounded-md shadow-sm border border-gray-300 bg-gray-50">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <i class="fa-regular fa-calendar text-gray-400"></i>
+      </div>
+      <input class="block w-full pl-10 pr-3 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0 cursor-not-allowed bg-transparent" id="dates" name="dates" placeholder="Dates (Select property)" type="text" disabled/>
+    </div>
+  </div>
+
+  <div class="w-full md:w-1/4 flex flex-col opacity-60">
+    <label class="sr-only" for="guests">Guests</label>
+    <div class="relative rounded-md shadow-sm border border-gray-300 bg-gray-50">
+      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+        <i class="fa-regular fa-user text-gray-400"></i>
+      </div>
+      <input class="block w-full pl-10 pr-3 py-3 sm:text-sm border-gray-300 rounded-md placeholder-gray-500 border-none ring-0 focus:ring-0 cursor-not-allowed bg-transparent" id="guests" name="guests" placeholder="Guests" type="text" disabled/>
+    </div>
+  </div>
+
+  <div class="w-full md:w-auto">
+    <button onclick="searchProperty()" class="w-full md:w-auto flex items-center justify-center px-8 py-3 border border-gray-800 shadow-sm text-sm font-medium rounded-md text-gray-900 bg-transparent hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 uppercase tracking-wide transition-colors" type="button">
+      Check Availability
+    </button>
+  </div>
 </form>
 </div>
 </div>
