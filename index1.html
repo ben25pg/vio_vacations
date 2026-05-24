@@ -51,7 +51,7 @@
       <select id="property-dropdown" class="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-gray-400 focus:border-gray-400 bg-white font-sans text-gray-800 appearance-none cursor-pointer">
         <option value="" disabled selected>Destination</option>
         <option value="tenkiller.html">Lake Tenkiller Retreats</option>
-        <option value="horseshoe-bay.html">The Luxury Hilltop HB</option>
+        <option value="hilltop.html">The Luxury Hilltop HB</option>
       </select>
       <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
         <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
@@ -100,5 +100,17 @@
       
     </div>
   </main>
+  <script>
+    function searchProperty() {
+      var dropdown = document.getElementById("property-dropdown");
+      var selectedPage = dropdown.value;
+      if (selectedPage) {
+        window.location.href = selectedPage;
+      } else {
+        alert("Please select a destination from the dropdown first!");
+      }
+    }
+  </script>
+</body>
   </body>
 </html>
