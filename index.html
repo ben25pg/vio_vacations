@@ -40,10 +40,15 @@
   .slide:nth-child(5) { animation-delay: 12s; }
 
   @keyframes fade {
+    /* Image stays hidden at the start */
     0% { opacity: 0; }
-    5% { opacity: 1; }  /* Fade in */
-    20% { opacity: 1; } /* Stay visible */
-    25% { opacity: 0; } /* Fade out */
+    /* Fade in quickly (takes 10% of total time) */
+    10% { opacity: 1; }
+    /* Stay visible (takes 30% of total time) */
+    40% { opacity: 1; }
+    /* Fade out (takes 10% of total time) */
+    50% { opacity: 0; }
+    /* Stay hidden until the cycle repeats */
     100% { opacity: 0; }
   }
   </style>
