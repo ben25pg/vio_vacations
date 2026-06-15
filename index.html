@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title>Vio Vacations</title>
+  <span class="font-serif text-2xl md:text-3xl lg:text-4xl mt-2 tracking-wide text-white drop-shadow-md">
+    <title>Vio Vacations</title>
+  </span>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,17 +38,18 @@
       </a>
     </div>
   </header>
-  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center space-y-8">
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white/10 backdrop-blur-md flex flex-col items-center justify-center space-y-8">
   
-    <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
+    <button onclick="toggleMenu()" class="absolute top-8 right-8 text-gray-900">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
     
-    <a class="text-white text-3xl font-serif" href="#">Destinations</a>
-    <a class="text-white text-3xl font-serif" href="#">Experiences</a>
-    <a class="text-white text-3xl font-serif" href="#">About</a>
+    <a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">Destinations</a>
+    <a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">Experiences</a>
+    <a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">About</a>
+    <a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">BOOK NOW</a>
   </div>
   <section class="relative h-[600px]">
     <div class="absolute inset-0 z-0">
