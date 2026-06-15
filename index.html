@@ -53,6 +53,16 @@
       </a>
     </div>
   </header>
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center space-y-8">
+    <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    
+    <a class="text-white text-3xl font-serif" href="#">Destinations</a>
+    <a class="text-white text-3xl font-serif" href="#">Experiences</a>
+    <a class="text-white text-3xl font-serif" href="#">About</a>
+    <a class="text-white text-3xl font-serif" href="#">BOOK NOW</a>
+  </div>
   <section class="relative h-[600px]">
     <div class="absolute inset-0 z-0">
       <img alt="Luxury modern house with a pool at sunset" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop"/>
@@ -125,7 +135,12 @@
         alert("Please select a destination from the dropdown first!");
       }
     }
-  </script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      // Optional: Prevent background scrolling when menu is open
+      document.body.style.overflow = menu.classList.contains('hidden') ? 'auto' : 'hidden';
+    }
+</script>
 </body>
-  </body>
 </html>
