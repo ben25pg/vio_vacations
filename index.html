@@ -57,11 +57,12 @@
     <a class="text-white text-3xl font-serif hover:text-gray-600 transition-colors" href="#">About</a>
     <!--<a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">BOOK NOW</a>-->
   </div>
-  <section class="relative h-[600px]">
-    <div class="absolute inset-0 z-0">
-      <img alt="Luxury modern house with a pool at sunset" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop"/>
-      <div class="absolute inset-0 bg-black/20"></div>
+  <section class="relative h-[600px] overflow-hidden">
+    <div class="slideshow">
+      <div class="slide" style="background-image: url('images/property-1.jpg');"></div>
+      <div class="slide" style="background-image: url('images/property-2.jpg');"></div>
     </div>
+    <div class="absolute inset-0 bg-black/20 z-0"></div> 
   </section>
 
   <div class="relative z-20 max-w-5xl mx-auto -mt-10 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl flex flex-col md:flex-row gap-4">
