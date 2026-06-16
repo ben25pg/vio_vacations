@@ -76,11 +76,13 @@
       </span>
     </div>
   
-    <div class="mt-2">
-      <a class="inline-flex items-center px-6 py-2 border border-white rounded bg-white/20 hover:bg-white/40 transition-colors text-white backdrop-blur-sm" href="#">
-        <span class="mr-2 font-medium tracking-wide text-sm">BOOK NOW</span>
-      </a>
-    </div>
+    <!-- Replace your existing Book Now button with this -->
+  <div class="mt-2">
+    <a class="inline-flex items-center px-6 py-2 border border-white rounded bg-white/20 hover:bg-white/40 transition-colors text-white backdrop-blur-sm" 
+       href="#check-availability">
+      <span class="mr-2 font-medium tracking-wide text-sm">BOOK NOW</span>
+    </a>
+  </div>
   </header>
   <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-white/10 backdrop-blur-md flex flex-col items-center justify-center space-y-8">
   
@@ -99,7 +101,6 @@
     <a class="text-white text-3xl font-serif hover:text-gray-600 transition-colors" href="#">Destinations</a>
     <a class="text-white text-3xl font-serif hover:text-gray-600 transition-colors" href="#">Experiences</a>
     <a class="text-white text-3xl font-serif hover:text-gray-600 transition-colors" href="#">About</a>
-    <!--<a class="text-gray-900 text-3xl font-serif hover:text-gray-600 transition-colors" href="#">BOOK NOW</a>-->
   </div>
   <section class="relative h-[600px] overflow-hidden">
     <div class="slideshow">
@@ -112,7 +113,7 @@
     <div class="absolute inset-0 bg-black/20 z-0"></div> 
   </section>
 
- <form id="propertySearch" class="relative z-20 max-w-lg mx-auto -mt-10 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl flex gap-4">
+ <form id="check-availability" class="relative z-20 max-w-lg mx-auto -mt-10 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl flex gap-4">
     <div class="flex-grow">
       <select id="property-dropdown" class="w-full px-4 py-3 border border-gray-200 rounded-lg bg-white focus:ring-1 focus:ring-gray-400 outline-none cursor-pointer">
         <option value="" disabled selected>Select a destination...</option>
