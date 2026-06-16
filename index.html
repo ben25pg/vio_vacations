@@ -178,10 +178,16 @@
       }
     }
     function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
+      const menu = document.getElementById('mobile-menu'); // Your actual menu element
+      const openIcon = document.getElementById('menu-open-icon');
+      const closeIcon = document.getElementById('menu-close-icon');
+    
+      // Toggle the menu visibility
       menu.classList.toggle('hidden');
-      // Optional: Prevent background scrolling when menu is open
-      document.body.style.overflow = menu.classList.contains('hidden') ? 'auto' : 'hidden';
+    
+      // Toggle icon visibility
+      openIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
     }
 </script>
 </body>
