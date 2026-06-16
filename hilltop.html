@@ -43,9 +43,32 @@
   <main class="pt-20">
     <section class="relative w-full h-[400px] overflow-hidden group">
       <div id="slideshow-container" class="relative w-full h-full">
-        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-100"><img src="images/hilltop-1.jpg" class="w-full h-full object-cover"></div>
-        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltop-2.jpg" class="w-full h-full object-cover"></div>
-        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltop-3.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-100"><img src="images/hilltopHB/hilltop-1.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-2.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-3.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-4.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-5.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-6.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-7.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-8.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-9.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-10.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-11.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-12.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-13.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-14.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-15.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-16.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-17.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-18.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-19.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-20.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-21.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-22.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-23.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-24.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-25.jpg" class="w-full h-full object-cover"></div>
+        <div class="slide absolute inset-0 transition-opacity duration-500 opacity-0"><img src="images/hilltopHB/hilltop-26.jpg" class="w-full h-full object-cover"></div>
       </div>
     
       <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
@@ -102,6 +125,20 @@
       </div>
     </section>
   </main>
-
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function changeSlide(direction) {
+      // Hide current
+      slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+      
+      // Calculate new index
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      
+      // Show new
+      slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+    }
+  </script>
 </body>
 </html>
