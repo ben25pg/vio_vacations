@@ -112,38 +112,29 @@
     <div class="absolute inset-0 bg-black/20 z-0"></div> 
   </section>
 
-  <div class="relative z-20 max-w-5xl mx-auto -mt-10 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl flex flex-col md:flex-row gap-4">
-    
-    <div class="flex-1 relative">
-      <select id="property-dropdown" class="w-full pl-4 pr-10 py-3 border border-gray-200 rounded-lg focus:ring-1 focus:ring-gray-400 focus:border-gray-400 bg-white font-sans text-gray-800 appearance-none cursor-pointer">
+ <form id="propertySearch" class="relative z-20 max-w-5xl mx-auto -mt-10 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl flex flex-col md:flex-row gap-4">
+    <div class="flex-1">
+      <select id="property-dropdown" class="w-full px-4 py-3 border border-gray-200 rounded-lg bg-white" required>
         <option value="" disabled selected>Destination</option>
         <option value="tenkiller.html">Lake Tenkiller Retreats</option>
         <option value="hilltop.html">The Luxury Hilltop HB</option>
       </select>
-      <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </div>
     </div>
-    
-    <div class="flex-1 relative opacity-70">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </div>
-      <input class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg bg-white font-sans text-gray-800 cursor-not-allowed" placeholder="Dates (Select property first)" type="text" disabled/>
+    <div class="flex-1">
+      <input id="checkIn" type="date" class="w-full px-4 py-3 border border-gray-200 rounded-lg bg-white" required/>
     </div>
-
-    <div class="flex-1 relative opacity-70">
-      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-      </div>
-      <input class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg bg-white font-sans text-gray-800 cursor-not-allowed" placeholder="Guests" type="text" disabled/>
+    <div class="flex-1">
+      <input id="checkOut" type="date" class="w-full px-4 py-3 border border-gray-200 rounded-lg bg-white" required/>
     </div>
-
+    <div class="flex-1">
+      <input id="guests" type="number" placeholder="Guests" class="w-full px-4 py-3 border border-gray-200 rounded-lg bg-white" min="1" required/>
+    </div>
     <div>
-      <button onclick="searchProperty()" class="px-8 py-3 bg-gray-100 hover:bg-gray-200 border border-gray-800 rounded-lg font-sans font-medium tracking-wide transition-colors whitespace-nowrap text-gray-800" type="button">
+      <button type="submit" class="px-8 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-lg font-sans font-medium transition-colors whitespace-nowrap">
         CHECK AVAILABILITY
       </button>
     </div>
+  </form>
   </div>
     <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
       <h2 class="text-5xl font-serif text-center mb-16 text-gray-900">Featured Collections</h2>
@@ -168,15 +159,19 @@
     </div>
   </main>
   <script>
-    function searchProperty() {
-      var dropdown = document.getElementById("property-dropdown");
-      var selectedPage = dropdown.value;
-      if (selectedPage) {
-        window.location.href = selectedPage;
-      } else {
-        alert("Please select a destination from the dropdown first!");
+    document.getElementById('propertySearch').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const propertyUrl = document.getElementById('property-dropdown').value;
+      const checkIn = document.getElementById('checkIn').value;
+      const checkOut = document.getElementById('checkOut').value;
+      const guests = document.getElementById('guests').value;
+  
+      if (!propertyUrl) {
+        alert("Please select a destination first!");
+        return;
       }
-    }
+      window.location.href = `${propertyUrl}?checkin=${checkIn}&checkout=${checkOut}&guests=${guests}`;
+    });
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu'); // Your actual menu element
       const openIcon = document.getElementById('menu-open-icon');
