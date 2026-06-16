@@ -51,6 +51,9 @@
     /* Stay hidden until the cycle repeats */
     100% { opacity: 0; }
   }
+  html {
+    scroll-behavior: smooth;
+  }
   </style>
 </head>
 <body class="bg-[#fafafa] font-sans text-gray-800">
@@ -151,10 +154,10 @@
     </div>
   </main>
   <script>
-    document.getElementById('propertySearch').addEventListener('submit', function(e) {
+    document.getElementById('check-availability').addEventListener('submit', function(e) {
       e.preventDefault();
       const propertyUrl = document.getElementById('property-dropdown').value;
-  
+    
       if (!propertyUrl) {
         alert("Please select a destination first!");
         return;
