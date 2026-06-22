@@ -133,13 +133,15 @@
   
     function changeSlide(direction) {
       // Hide current
-      slides[currentSlide].classList.replace('opacity-100', 'opacity-0');
+      slides[currentSlide].classList.remove('opacity-100');
+      slides[currentSlide].classList.add('opacity-0');
       
       // Calculate new index
       currentSlide = (currentSlide + direction + slides.length) % slides.length;
       
       // Show new
-      slides[currentSlide].classList.replace('opacity-0', 'opacity-100');
+      slides[currentSlide].classList.remove('opacity-0');
+      slides[currentSlide].classList.add('opacity-100');
     }
   </script>
 </body>
