@@ -10,6 +10,8 @@
   <style>
     .font-serif { font-family: 'Playfair Display', serif; }
     .font-sans { font-family: 'Inter', sans-serif; }
+    .slide { opacity: 0; }
+    .slide.opacity-100 { opacity: 1; }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
@@ -22,10 +24,14 @@
           <a class="text-gray-700 hover:text-black transition-colors" href="#">Experiences</a>
           <a class="text-gray-700 hover:text-black transition-colors" href="#">About</a>
         </nav>
-        <div class="flex-shrink-0 flex items-center justify-center flex-1 md:flex-none">
-          <a class="flex flex-col items-center" href="index.html"><i class="fa-solid fa-tree text-3xl mb-1"></i>
-          <span class="font-serif text-2xl font-semibold tracking-wide mt-1 text-gray-900">Vio Vacations</span></a>
+        
+        <div class="flex flex-col items-center">
+          <img src="vio-vacations-logo.svg" alt="Vio Vacations Logo" class="w-10 h-auto object-contain">
+          <span class="font-serif text-lg mt-1 tracking-wide text-gray-900">
+            Vio Vacations
+          </span>
         </div>
+        
         <div class="hidden md:flex items-center">
           <a class="inline-flex items-center px-4 py-2 border border-gray-800 rounded hover:bg-gray-50 transition-colors text-gray-900" href="#book-now">
             <span class="mr-2 uppercase text-sm tracking-wider">Book Now</span>
@@ -116,7 +122,7 @@
           <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
             <h3 class="text-2xl font-serif text-gray-900 mb-6">Availability</h3>
             
-            <div class="py-4">
+            <div class="text-gray-400 text-center py-10">
               <!-- OwnerRez Multiple Month Calendar widget for The Silo - Unique Experience, Lake, Firepit, BBQ -->
               <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
               <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
