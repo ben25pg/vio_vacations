@@ -134,7 +134,7 @@
     <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
       <h2 class="text-5xl font-serif text-center mb-16 text-gray-900">Featured Collections</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
+      <button onclick="openModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
       <a class="group relative h-80 rounded-2xl overflow-hidden shadow-lg block" href="#">
         <img alt="Lake Tenkiller Retreats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/silo/silo-1.jpg" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
@@ -176,6 +176,35 @@
       openIcon.classList.toggle('hidden');
       closeIcon.classList.toggle('hidden');
     }
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+
+// Attach this to your button
+// <button onclick="openModal()">View Gallery</button>
+
+// Attach this to your button
+// <button onclick="openModal()">View Gallery</button>
 </script>
+  <!-- The Modal Overlay -->
+  <div id="modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center">
+    <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+    
+    <div class="relative w-full max-w-4xl h-3/4">
+      <!-- Slideshow content goes here -->
+      <div id="modal-slideshow" class="w-full h-full">
+        <!-- You can inject your images here via JS or hardcode them -->
+        <img src="images/hilltopHB/hilltop-1.jpg" class="w-full h-full object-contain">
+      </div>
+      
+      <!-- Navigation -->
+      <button onclick="modalNav(-1)" class="absolute left-4 top-1/2 text-white text-4xl">&lt;</button>
+      <button onclick="modalNav(1)" class="absolute right-4 top-1/2 text-white text-4xl">&gt;</button>
+    </div>
+  </div>
 </body>
 </html>
