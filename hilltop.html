@@ -146,6 +146,36 @@
       slides[currentSlide].classList.remove('opacity-0');
       slides[currentSlide].classList.add('opacity-100');
     }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+  
+    function showSlide(index) {
+      // Reset all slides
+      slides.forEach((slide) => {
+        slide.classList.remove('opacity-100');
+        slide.classList.add('opacity-0');
+      });
+      
+      // Show target slide
+      slides[index].classList.remove('opacity-0');
+      slides[index].classList.add('opacity-100');
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+  
+    // Change slide every 5 seconds (5000 milliseconds)
+    setInterval(nextSlide, 5000);
+  
+    // Keep your existing manual navigation (optional)
+    function changeSlide(n) {
+      currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
   </script>
 </body>
 </html>
