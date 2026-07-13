@@ -184,12 +184,30 @@
       document.getElementById('modal').classList.add('hidden');
     }
 
-// Attach this to your button
-// <button onclick="openModal()">View Gallery</button>
+    function openModal() {
+      document.getElementById('modal').classList.remove('hidden');
+    }
 
-// Attach this to your button
-// <button onclick="openModal()">View Gallery</button>
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
 </script>
+  <!-- The Modal Overlay -->
+  <div id="modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center">
+    <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+    
+    <div class="relative w-full max-w-4xl h-3/4">
+      <!-- Slideshow content goes here -->
+      <div id="modal-slideshow" class="w-full h-full">
+        <!-- You can inject your images here via JS or hardcode them -->
+        <img src="images/hilltopHB/hilltop-1.jpg" class="w-full h-full object-contain">
+      </div>
+      
+      <!-- Navigation -->
+      <button onclick="modalNav(-1)" class="absolute left-4 top-1/2 text-white text-4xl">&lt;</button>
+      <button onclick="modalNav(1)" class="absolute right-4 top-1/2 text-white text-4xl">&gt;</button>
+    </div>
+  </div>
   <!-- The Modal Overlay -->
   <div id="modal" class="fixed inset-0 z-50 hidden bg-black/90 flex items-center justify-center">
     <button onclick="closeModal()" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
