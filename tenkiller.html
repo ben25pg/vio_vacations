@@ -247,6 +247,22 @@
       slides[currentSlide].classList.add('opacity-100');
     }
 
+    function openGallery() {
+    const modal = document.getElementById('gallery-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    // Prevents the background page from scrolling while gallery is open
+    document.body.style.overflow = 'hidden'; 
+  }
+
+  function closeGallery() {
+    const modal = document.getElementById('gallery-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    // Restores background scrolling
+    document.body.style.overflow = 'auto'; 
+  }
+
     <!-- Generated Gallery Items -->
 
   const galleryGrid = document.currentScript.parentElement;
