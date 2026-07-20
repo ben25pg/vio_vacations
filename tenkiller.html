@@ -148,46 +148,52 @@
      </section> -->
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
     
-    <!-- Left Column: New Photo Gallery Box -->
-    <div class="space-y-6">
-      <div class="rounded-2xl overflow-hidden shadow-lg h-[400px]">
-        <img src="images/silo/silo-1.jpg" class="w-full h-full object-cover" alt="Interior view">
-      </div>
-      <div class="grid grid-cols-2 gap-4">
-        <div class="rounded-xl overflow-hidden shadow-sm h-40">
-          <img src="images/silo/silo-2.jpg" class="w-full h-full object-cover" alt="Detail view">
+    <!-- This spans 2 columns: Contains the Photo Box + About Text -->
+    <div class="lg:col-span-2 space-y-8">
+      
+      <!-- New 2-column grid for Photos and Text side-by-side -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        
+        <!-- Left: Photo Box -->
+        <div class="w-full">
+          <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-xl shadow-md" alt="Property Photo">
         </div>
-        <div class="rounded-xl overflow-hidden shadow-sm h-40">
-          <img src="images/silo/silo-3.jpg" class="w-full h-full object-cover" alt="Exterior view">
+        
+        <!-- Right: About Text -->
+        <div>
+          <h2 class="text-3xl font-serif text-gray-900 mb-4">About This Retreat</h2>
+          <p class="text-gray-600 leading-relaxed text-lg">
+            Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-gray-200">
+
+      <!-- Availability remains below the text/photo block -->
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+        <h3 class="text-2xl font-serif text-gray-900 mb-6">Availability</h3>
+        <div class="text-gray-400 text-center py-10">
+          <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
         </div>
       </div>
     </div>
 
-    <!-- Right Column: About and Booking -->
-    <div class="space-y-12">
-      <div>
-        <h2 class="text-3xl font-serif text-gray-900 mb-4">About This Retreat</h2>
-        <p class="text-gray-600 leading-relaxed text-lg">
-          Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100" id="book-now">
-        <h3 class="text-2xl font-serif text-gray-900 mb-6">Availability</h3>
-        <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
-      </div>
-      
-      <!-- Booking/Inquiry moved under Availability -->
-      <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+    <!-- Right Sidebar: Reserve Your Stay (Stays in the same place) -->
+    <div class="lg:col-span-1" id="book-now">
+      <div class="sticky top-28 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
         <h3 class="text-2xl font-serif text-gray-900 mb-4 text-center">Reserve Your Stay</h3>
-        <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
+        <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-10 text-center text-gray-500">
+           <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
+    
   </main>
   <script>
     let currentSlide = 0;
