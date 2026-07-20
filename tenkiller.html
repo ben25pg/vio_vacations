@@ -12,6 +12,10 @@
     .font-sans { font-family: 'Inter', sans-serif; }
     .slide { opacity: 0; }
     .slide.opacity-100 { opacity: 1; }
+    .slide img {
+      image-rendering: -webkit-optimize-contrast; /* For Chrome/Safari */
+      image-rendering: crisp-edges;
+    }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800 bg-gray-50">
