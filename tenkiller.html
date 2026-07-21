@@ -52,7 +52,7 @@
       </div>
 
       <!-- Gallery Trigger Button -->
-      <button onclick="openGallery()" class="absolute bottom-8 right-8 md:right-16 z-10 bg-white text-gray-900 px-5 py-2.5 rounded-lg shadow-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 cursor-pointer">
+      <button onclick="openLightbox(0)" class="absolute bottom-8 right-8 md:right-16 z-10 bg-white text-gray-900 px-5 py-2.5 rounded-lg shadow-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 cursor-pointer">
         <i class="fa-solid fa-images"></i> View all photos
       </button>
     </section>
@@ -66,7 +66,7 @@
           <!-- Photos and Text Side-by-Side -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div class="w-full">
-              <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-xl shadow-md cursor-pointer" onclick="openGallery()" alt="The Silo">
+              <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-xl shadow-md cursor-pointer" onclick="openLightbox(0)" alt="The Silo">
             </div>
             <div>
               <h2 class="text-3xl font-serif text-gray-900 mb-4">About This Retreat</h2>
@@ -104,43 +104,27 @@
     </section>
   </main>
 
-    <!-- Full Screen Image Gallery Modal -->
-  <div id="gallery-modal" class="fixed inset-0 z-[100] bg-white hidden flex-col h-screen overflow-y-auto">
-    <!-- Sticky Header with Close Button -->
-    <div class="sticky top-0 bg-white/95 backdrop-blur-sm px-6 py-4 border-b border-gray-200 flex justify-between items-center z-10 shadow-sm">
-      <h2 class="text-2xl font-serif font-semibold text-gray-900">Photo Gallery (37 Photos)</h2>
-      <button onclick="closeGallery()" class="text-gray-500 hover:text-black bg-gray-100 hover:bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer">
-        <i class="fa-solid fa-xmark text-xl"></i>
+   <!-- Direct Full-Screen Interactive Lightbox Overlay -->
+    <div id="image-preview" class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center p-4">
+      <!-- Close Button -->
+      <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl bg-black/50 hover:bg-black w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">&times;</button>
+      
+      <!-- Previous Button (<) -->
+      <button onclick="navigateLightbox(-1)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+        <i class="fa-solid fa-chevron-left text-xl"></i>
+      </button>
+    
+      <!-- Main Display Image Container -->
+      <div class="max-w-5xl max-h-[85vh] flex items-center justify-center flex-col">
+        <img id="preview-img" src="" class="max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
+        <span id="image-counter" class="text-white/70 text-sm mt-4 font-sans tracking-wide"></span>
+      </div>
+    
+      <!-- Next Button (>) -->
+      <button onclick="navigateLightbox(1)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+        <i class="fa-solid fa-chevron-right text-xl"></i>
       </button>
     </div>
-  
-    <!-- Mosaic Gallery Grid Container -->
-    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 w-full columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="gallery-grid-container">
-      <!-- Generated Gallery Items Script -->
-      <script>
-        const galleryGrid = document.getElementById('gallery-grid-container');
-        const previewOverlay = document.getElementById('image-preview');
-        const previewImg = document.getElementById('preview-img');
-  
-        for (let i = 1; i <= 37; i++) {
-          const img = document.createElement('img');
-          img.src = `images/silo/silo-${i}.jpg`;
-          // Using break-inside-avoid and variable styling for a natural mosaic look
-          img.className = 'w-full object-cover rounded-xl shadow-md hover:opacity-95 transition-opacity cursor-pointer break-inside-avoid mb-4';
-          img.alt = `The Silo Photo ${i}`;
-          
-          // Click-to-zoom preview action
-          img.onclick = function() {
-            previewImg.src = this.src;
-            previewOverlay.classList.remove('hidden');
-            previewOverlay.classList.add('flex');
-          };
-          
-          galleryGrid.appendChild(img);
-        }
-      </script>
-    </div>
-  </div>
 
   <!-- Click-to-Zoom Preview Overlay -->
   <div id="image-preview" class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center p-4">
@@ -163,6 +147,52 @@
       modal.classList.remove('flex');
       document.body.style.overflow = 'auto'; // Restores background scrolling
     }
+    <!-- Lightbox Controller Scripts -->
+    let activeImageIndex = 0;
+    const totalImages = 37;
+    const galleryImages = [];
+  
+    // Pre-load all image paths into an array
+    for (let i = 1; i <= totalImages; i++) {
+      galleryImages.push(`images/silo/silo-${i}.jpg`);
+    }
+  
+    const previewOverlay = document.getElementById('image-preview');
+    const previewImg = document.getElementById('preview-img');
+    const imageCounter = document.getElementById('image-counter');
+  
+    function openLightbox(index) {
+      activeImageIndex = index;
+      updateLightboxImage();
+      previewOverlay.classList.remove('hidden');
+      previewOverlay.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Locks background scrolling
+    }
+  
+    function closeLightbox() {
+      previewOverlay.classList.add('hidden');
+      previewOverlay.classList.remove('flex');
+      document.body.style.overflow = 'auto'; // Restores background scrolling
+    }
+  
+    function navigateLightbox(direction) {
+      activeImageIndex = (activeImageIndex + direction + galleryImages.length) % galleryImages.length;
+      updateLightboxImage();
+    }
+  
+    function updateLightboxImage() {
+      previewImg.src = galleryImages[activeImageIndex];
+      imageCounter.textContent = `${activeImageIndex + 1} / ${totalImages}`;
+    }
+  
+    // Keyboard controls: Left/Right arrows and Escape to close
+    document.addEventListener('keydown', function(e) {
+      if (!previewOverlay.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
   </script>
 </body>
 </html>
