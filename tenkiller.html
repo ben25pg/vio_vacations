@@ -104,7 +104,7 @@
     </section>
   </main>
 
-  <!-- Full Screen Image Gallery Modal -->
+    <!-- Full Screen Image Gallery Modal -->
   <div id="gallery-modal" class="fixed inset-0 z-[100] bg-white hidden flex-col h-screen overflow-y-auto">
     <!-- Sticky Header with Close Button -->
     <div class="sticky top-0 bg-white/95 backdrop-blur-sm px-6 py-4 border-b border-gray-200 flex justify-between items-center z-10 shadow-sm">
@@ -113,19 +113,20 @@
         <i class="fa-solid fa-xmark text-xl"></i>
       </button>
     </div>
-
-    <!-- Image Grid Container -->
-    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full" id="gallery-grid-container">
+  
+    <!-- Mosaic Gallery Grid Container -->
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 w-full columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4" id="gallery-grid-container">
       <!-- Generated Gallery Items Script -->
       <script>
         const galleryGrid = document.getElementById('gallery-grid-container');
         const previewOverlay = document.getElementById('image-preview');
         const previewImg = document.getElementById('preview-img');
-
+  
         for (let i = 1; i <= 37; i++) {
           const img = document.createElement('img');
           img.src = `images/silo/silo-${i}.jpg`;
-          img.className = 'w-full h-64 md:h-80 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform cursor-pointer';
+          // Using break-inside-avoid and variable styling for a natural mosaic look
+          img.className = 'w-full object-cover rounded-xl shadow-md hover:opacity-95 transition-opacity cursor-pointer break-inside-avoid mb-4';
           img.alt = `The Silo Photo ${i}`;
           
           // Click-to-zoom preview action
