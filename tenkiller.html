@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Lake Tenkiller Retreat | Vio Vacations</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <nav class="hidden md:flex space-x-8">
+          <a class="text-gray-700 hover:text-black transition-colors" href="index.html">Home</a>
+          <a class="text-gray-700 hover:text-black transition-colors" href="#">About</a>
+        </nav>
+        
+        <div class="flex flex-col items-center">
+          <img src="vio-vacations-logo.svg" alt="Vio Vacations Logo" class="w-10 h-auto object-contain">
+          <span class="font-serif text-lg mt-1 tracking-wide text-gray-900">
+            Vio Vacations
+          </span>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-4 py-2 border border-gray-800 rounded hover:bg-gray-50 transition-colors text-gray-900" href="#book-now">
+            <span class="mr-2 uppercase text-sm tracking-wider">Book Now</span>
+            <i class="fa-solid fa-calendar-check text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+    <!-- Hero Section with Single High-Quality Image & Gallery Button -->
+    <section class="relative w-full h-[600px] overflow-hidden bg-gray-200">
+      <img src="images/silo/silo-1.jpg" class="w-full h-full object-cover" alt="The Silo at Lake Tenkiller">
+      
+      <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+      
+      <div class="absolute bottom-8 left-8 md:left-16 z-10">
+        <h1 class="text-4xl md:text-5xl font-serif text-white mb-2">The Silo @ Lake Tenkiller</h1>
+      </div>
+
+      <!-- Gallery Trigger Button -->
+      <button onclick="openGallery()" class="absolute bottom-8 right-8 md:right-16 z-10 bg-white text-gray-900 px-5 py-2.5 rounded-lg shadow-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 cursor-pointer">
+        <i class="fa-solid fa-images"></i> View all photos
+      </button>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <!-- LEFT COLUMN: About & Photos (Spans 2 columns) -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Photos and Text Side-by-Side -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div class="w-full">
+              <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-xl shadow-md cursor-pointer" onclick="openGallery()" alt="The Silo">
+            </div>
+            <div>
+              <h2 class="text-3xl font-serif text-gray-900 mb-4">About This Retreat</h2>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Booking Widgets (Spans 1 column) -->
+        <div class="lg:col-span-1 space-y-8">
+          
+          <!-- Availability Widget -->
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-serif text-gray-900 mb-6">Availability</h3>
+            <div class="text-gray-400 text-center">
+              <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
+              <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+
+          <!-- Reserve Your Stay Widget -->
+          <div id="book-now" class="sticky top-28 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+            <h3 class="text-2xl font-serif text-gray-900 mb-4 text-center">Reserve Your Stay</h3>
+            <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+              <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
+              <script src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Full Screen Image Gallery Modal -->
+  <div id="gallery-modal" class="fixed inset-0 z-[100] bg-white hidden flex-col h-screen overflow-y-auto">
+    <!-- Sticky Header with Close Button -->
+    <div class="sticky top-0 bg-white/95 backdrop-blur-sm px-6 py-4 border-b border-gray-200 flex justify-between items-center z-10 shadow-sm">
+      <h2 class="text-2xl font-serif font-semibold text-gray-900">Photo Gallery (37 Photos)</h2>
+      <button onclick="closeGallery()" class="text-gray-500 hover:text-black bg-gray-100 hover:bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center transition-colors cursor-pointer">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Image Grid Container -->
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full" id="gallery-grid-container">
+      <!-- Generated Gallery Items Script -->
+      <script>
+        const galleryGrid = document.getElementById('gallery-grid-container');
+        const previewOverlay = document.getElementById('image-preview');
+        const previewImg = document.getElementById('preview-img');
+
+        for (let i = 1; i <= 37; i++) {
+          const img = document.createElement('img');
+          img.src = `images/silo/silo-${i}.jpg`;
+          img.className = 'w-full h-64 md:h-80 object-cover rounded-xl shadow-sm hover:scale-[1.02] transition-transform cursor-pointer';
+          img.alt = `The Silo Photo ${i}`;
+          
+          // Click-to-zoom preview action
+          img.onclick = function() {
+            previewImg.src = this.src;
+            previewOverlay.classList.remove('hidden');
+            previewOverlay.classList.add('flex');
+          };
+          
+          galleryGrid.appendChild(img);
+        }
+      </script>
+    </div>
+  </div>
+
+  <!-- Click-to-Zoom Preview Overlay -->
+  <div id="image-preview" class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center p-4">
+    <button onclick="document.getElementById('image-preview').classList.add('hidden'); document.getElementById('image-preview').classList.remove('flex');" class="absolute top-6 right-6 text-white text-4xl hover:text-gray-300 cursor-pointer">&times;</button>
+    <img id="preview-img" src="" class="max-h-[90vh] max-w-full rounded-lg shadow-2xl object-contain">
+  </div>
+
+  <!-- Modal Script Controllers -->
+  <script>
+    function openGallery() {
+      const modal = document.getElementById('gallery-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Locks background scrolling
+    }
+
+    function closeGallery() {
+      const modal = document.getElementById('gallery-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'auto'; // Restores background scrolling
+    }
+  </script>
+</body>
+</html>
