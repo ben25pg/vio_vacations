@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Live Oak Lake</title>
+    <title>Contact Us | Vio Vacations</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header / Navigation -->
     <header class="site-header">
-        <div class="logo">Live Oak Lake</div>
+        <div class="logo">VIO VACATIONS</div>
         <nav class="site-nav">
-            <a href="#">Home</a>
-            <a href="#">Cabins</a>
-            <a href="#">Amenities</a>
+            <a href="index.html">Destinations</a>
+            <a href="#">Experiences</a>
             <a href="#">About</a>
-            <a href="#">FAQ</a>
-            <a href="#" class="active">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
         </nav>
+        <div class="header-action">
+            <a href="#" class="book-btn">Book Now</a>
+        </div>
     </header>
 
     <!-- Main Content -->
     <main class="contact-main">
         <div class="contact-container">
             
-            <!-- Left Column: Info -->
+            <!-- Left Column: Info & Context -->
             <div class="contact-info">
-                <h1>CONTACT US</h1>
-                <p class="subtitle">How can we help?</p>
+                <h1>GET IN TOUCH</h1>
+                <p class="subtitle">A Sanctuary for the Modern Traveler</p>
                 
-                <div class="faq-prompt">
-                    <p>Find helpful answers to popular questions <a href="#">here</a>.</p>
-                </div>
+                <p class="description">
+                    Whether you are planning your escape to The Luxury Hilltop at Horseshoe Bay or seeking details about the Silo Retreat at Lake Tenkiller, we are here to help curate your experience.
+                </p>
 
                 <div class="details">
-                    <p><strong>Email:</strong> <a href="mailto:info@liveoaklake.com">info@liveoaklake.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:2545229843">254-522-9843</a></p>
-                    <p><strong>Address:</strong><br>
-                    1445 Spring Lake Rd<br>
-                    Waco, Texas 76705</p>
+                    <div class="detail-item">
+                        <span class="label">Inquiries & Booking</span>
+                        <a href="mailto:viobnb@gmail.com">viobnb@gmail.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Connect Online</span>
+                        <p>Message us directly via our property pages or social channels.</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Column: Form -->
+            <!-- Right Column: Interactive Form -->
             <div class="contact-form-wrapper">
                 <form class="contact-form" action="#" method="POST">
                     <div class="form-row">
@@ -60,16 +64,26 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email *</label>
+                        <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="destination">Interested Destination</label>
+                        <select id="destination" name="destination">
+                            <option value="">Select a property...</option>
+                            <option value="horseshoe-bay">The Luxury Hilltop at Horseshoe Bay</option>
+                            <option value="lake-tenkiller">The Silo Retreat at Lake Tenkiller</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
                     </div>
 
-                    <button type="submit" class="submit-btn">SUBMIT</button>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="How can we assist your stay?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SEND MESSAGE</button>
                 </form>
             </div>
 
@@ -79,11 +93,11 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-logo">Live Oak Lake</div>
-            <p class="footer-tagline">Seven stunning cabins nestled in the heart of Texas.</p>
+            <div class="footer-logo">VIO VACATIONS</div>
+            <p class="footer-tagline">Curated sanctuaries for rest, intention, and reconnection.</p>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Live Oak Lake. All rights reserved.</p>
+            <p>&copy; 2026 Vio Vacations. All rights reserved.</p>
         </div>
     </footer>
 
