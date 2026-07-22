@@ -19,12 +19,17 @@ a {
 
 /* Header */
 .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 6%;
+    padding: 1.5rem 6%;
     background-color: #ffffff;
     border-bottom: 1px solid #f0efe9;
+    z-index: 1000; /* Ensures the header stays on top of all other elements */
 }
 
 .logo {
