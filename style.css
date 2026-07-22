@@ -19,17 +19,15 @@ a {
 
 /* Header */
 .site-header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
+    z-index: 1000; /* Keeps the header floating above everything else */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 6%;
     background-color: #ffffff;
     border-bottom: 1px solid #f0efe9;
-    z-index: 1000; /* Ensures the header stays on top of all other elements */
 }
 
 .logo {
