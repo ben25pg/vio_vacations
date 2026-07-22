@@ -9,57 +9,10 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .font-serif { font-family: 'Cormorant Garamond', serif; }
-    .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .slideshow {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    /* 15 seconds total duration */
-    animation: fade 15s infinite;
-   }
-
-  /* Each image takes 3 seconds (15 / 5 = 3) */
-  .slide:nth-child(1) { animation-delay: 0s; }
-  .slide:nth-child(2) { animation-delay: 3s; }
-  .slide:nth-child(3) { animation-delay: 6s; }
-  .slide:nth-child(4) { animation-delay: 9s; }
-  .slide:nth-child(5) { animation-delay: 12s; }
-
-  @keyframes fade {
-    /* Image stays hidden at the start */
-    0% { opacity: 0; }
-    /* Fade in quickly (takes 10% of total time) */
-    10% { opacity: 1; }
-    /* Stay visible (takes 30% of total time) */
-    40% { opacity: 1; }
-    /* Fade out (takes 10% of total time) */
-    50% { opacity: 0; }
-    /* Stay hidden until the cycle repeats */
-    100% { opacity: 0; }
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  </style>
 </head>
 <body class="bg-[#faf9f6] font-sans text-[#2c2c2c]">
 
- <header class="absolute w-full top-0 z-10 py-6 px-6 md:px-12 flex justify-between items-center bg-transparent">
+ <header class="site-header absolute w-full top-0 z-10 py-6 px-6 md:px-12 flex justify-between items-center bg-transparent">
   
     <button onclick="toggleMenu()" class="md:hidden text-white z-50">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
