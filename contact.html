@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Live Oak Lake</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="logo">Live Oak Lake</div>
+        <nav class="site-nav">
+            <a href="#">Home</a>
+            <a href="#">Cabins</a>
+            <a href="#">Amenities</a>
+            <a href="#">About</a>
+            <a href="#">FAQ</a>
+            <a href="#" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-main">
+        <div class="contact-container">
+            
+            <!-- Left Column: Info -->
+            <div class="contact-info">
+                <h1>CONTACT US</h1>
+                <p class="subtitle">How can we help?</p>
+                
+                <div class="faq-prompt">
+                    <p>Find helpful answers to popular questions <a href="#">here</a>.</p>
+                </div>
+
+                <div class="details">
+                    <p><strong>Email:</strong> <a href="mailto:info@liveoaklake.com">info@liveoaklake.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:2545229843">254-522-9843</a></p>
+                    <p><strong>Address:</strong><br>
+                    1445 Spring Lake Rd<br>
+                    Waco, Texas 76705</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">Live Oak Lake</div>
+            <p class="footer-tagline">Seven stunning cabins nestled in the heart of Texas.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Live Oak Lake. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
