@@ -6,35 +6,288 @@
   <title>Lake Tenkiller Retreat | Vio Vacations</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
+<body class="font-sans antialiased text-stone-700 bg-stone-50">
 
   <!-- Header -->
-  <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+  <header class="fixed w-full top-0 z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
         
-        <!-- Left Side: Mobile Hamburger Button & Desktop Nav -->
-        <div class="flex items-center space-x-4">
-          <!-- Mobile Hamburger Toggle Button -->
-          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars text-2xl"></i>
+        <div class="flex items-center space-x-6">
+          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
           </button>
 
-          <!-- Desktop Nav -->
-          <nav class="hidden md:flex space-x-6">
-            <a class="text-gray-700 hover:text-black transition-colors" href="index.html">Home</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="#about">About</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="siloamenities.html">Amenities</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="siloguide.html">Local Guide</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="contact.html">Contact</a>
+          <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/90">
+            <a class="hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="hover:text-white transition-colors" href="index.html#about">About</a>
+            <a class="hover:text-white transition-colors" href="siloamenities.html">Amenities</a>
+            <a class="hover:text-white transition-colors" href="siloguide.html">Local Guide</a>
+            <a class="hover:text-white transition-colors" href="contact.html">Contact</a>
           </nav>
         </div>
         
-        <!-- Logo -->
         <div class="flex flex-col items-center">
+          <span class="font-serif text-xl tracking-wider text-white">Vio Vacations</span>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="#book-now">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-stone-950/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html#about">About</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="siloamenities.html">Amenities</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="siloguide.html">Local Guide</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="contact.html">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-stone-900 rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="#book-now">
+        Book Now
+      </a>
+    </nav>
+    <div></div>
+  </div>
+
+  <main class="pt-24">
+    <section class="relative w-full h-[650px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
+      <img src="images/silo/silo-1.jpg" srcset="images/silo/silo-1.jpg 1x, images/silo/silo-5.jpg 2x" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Silo at Lake Tenkiller">
+      <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
+      
+      <div class="relative z-10 px-4 max-w-4xl mx-auto flex flex-col items-center space-y-6">
+        <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide">The Silo @ Lake Tenkiller</h1>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+          <a href="#availability-section" class="bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 px-6 py-3 rounded-full shadow-lg font-medium transition-all backdrop-blur-sm flex items-center gap-2 text-xs uppercase tracking-widest">
+            <i class="fa-solid fa-calendar-days"></i> Check Availability
+          </a>
+          
+          <button onclick="openLightbox(0)" class="bg-white text-stone-900 px-6 py-3 rounded-full shadow-lg font-semibold hover:bg-stone-100 transition-all flex items-center gap-2 cursor-pointer text-xs uppercase tracking-widest">
+            <i class="fa-solid fa-images"></i> View Gallery
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+  
+        <div class="lg:col-span-2 space-y-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div class="w-full">
+              <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-2xl shadow-sm cursor-pointer" onclick="openLightbox(0)" alt="The Silo">
+            </div>
+            <div>
+              <h2 id="about" class="text-3xl font-serif text-stone-900 mb-4">About This Retreat</h2>
+              <p class="text-stone-600 leading-relaxed text-base">
+                Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
+              </p>
+            </div>
+          </div>
+          
+          <div class="mt-16 pt-12 border-t border-stone-200">
+            <h3 class="text-2xl font-serif text-stone-900 mb-6">Around Lake Tenkiller</h3>
+            <p class="text-stone-600 leading-relaxed mb-10">
+                The Silo Retreat is perfectly situated close to the area's best outdoor adventures, dining, and scenic views, making it easy to experience everything the lake has to offer.
+            </p>
+             
+            <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-1">
+                        <img src="https://www.publicdomainpictures.net/pictures/380000/velka/boat-dock-lake.jpg" alt="Pine Cove Marina" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <a href="https://simonspcm.com/" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-water text-sm text-stone-400"></i> Pine Cove Marina <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Just minutes away for boat rentals, slips, and easy access to the crystal-clear waters of the lake.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-2 md:order-1 space-y-2">
+                        <a href="https://www.travelok.com/listings/view.profile/id.551" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-utensils text-sm text-stone-400"></i> Big Daddy's Right On The Dam Highway <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            A beloved local favorite located near the entrance of Tenkiller State Park, famous for its hearty comfort food, burgers, and relaxed atmosphere.
+                        </p>
+                    </div>
+                    <div class="md:col-span-1 md:order-2">
+                        <img src="https://www.publicdomainpictures.net/pictures/320000/velka/restaurant-interior-15795328407J9.jpg" alt="Big Daddy's Restaurant" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-1">
+                        <img src="https://www.publicdomainpictures.net/pictures/650000/velka/lake-tenkiller-oklahoma.jpg" alt="Tenkiller State Park" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <a href="https://www.travelok.com/state-parks/tenkiller-state-park" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-tree text-sm text-stone-400"></i> Tenkiller State Park <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Widely known as Oklahoma's "Heaven in the Hills," offering gorgeous hiking trails, scenic overlooks, and family-friendly recreation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-1 space-y-8">
+          <div id="availability-section" class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-6">Availability</h3>
+            <div class="text-stone-400 text-center">
+              <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
+              <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+          
+          <div id="book-now" class="sticky top-28 bg-white p-6 rounded-2xl shadow-lg border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-4 text-center">Reserve Your Stay</h3>
+            <div class="bg-stone-50 border-2 border-dashed border-stone-200 rounded-xl p-6 text-center">
+              <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
+              <script src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Unified Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="index.html" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="contact.html" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
+  <div id="image-preview" class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl bg-black/50 hover:bg-black w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">&times;</button>
+    <button onclick="navigateLightbox(-1)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+      <i class="fa-solid fa-chevron-left text-xl"></i>
+    </button>
+    <div class="max-w-5xl max-h-[85vh] flex items-center justify-center flex-col">
+      <img id="preview-img" src="" class="max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
+      <span id="image-counter" class="text-white/70 text-sm mt-4 font-sans tracking-wide"></span>
+    </div>
+    <button onclick="navigateLightbox(1)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+      <i class="fa-solid fa-chevron-right text-xl"></i>
+    </button>
+  </div>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    let activeImageIndex = 0;
+    const totalImages = 37;
+    const galleryImages = [];
+  
+    for (let i = 1; i <= totalImages; i++) {
+      galleryImages.push(`images/silo/silo-${i}.jpg`);
+    }
+  
+    const previewOverlay = document.getElementById('image-preview');
+    const previewImg = document.getElementById('preview-img');
+    const imageCounter = document.getElementById('image-counter');
+  
+    function openLightbox(index) {
+      activeImageIndex = index;
+      updateLightboxImage();
+      previewOverlay.classList.remove('hidden');
+      previewOverlay.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closeLightbox() {
+      previewOverlay.classList.add('hidden');
+      previewOverlay.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+  
+    function navigateLightbox(direction) {
+      activeImageIndex = (activeImageIndex + direction + galleryImages.length) % galleryImages.length;
+      updateLightboxImage();
+    }
+  
+    function updateLightboxImage() {
+      previewImg.src = galleryImages[activeImageIndex];
+      imageCounter.textContent = `${activeImageIndex + 1} / ${totalImages}`;
+    }
+  
+    document.addEventListener('keydown', function(e) {
+      if (!previewOverlay.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>        <div class="flex flex-col items-center">
           <img src="vio-vacations-logo.svg" alt="Vio Vacations Logo" class="w-10 h-auto object-contain">
           <span class="font-serif text-lg mt-1 tracking-wide text-gray-900">
             Vio Vacations
