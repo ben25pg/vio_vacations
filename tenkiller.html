@@ -16,12 +16,20 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex space-x-8">
-          <a class="text-gray-700 hover:text-black transition-colors" href="index.html">Home</a>
-          <a class="text-gray-700 hover:text-black transition-colors" href="#about">About</a>
-          <a class="text-gray-700 hover:text-black transition-colors" href="contact.html">Contact</a>
-        </nav>
+        <!-- Left Side: Mobile Hamburger Button & Desktop Nav -->
+        <div class="flex items-center space-x-4">
+          <!-- Mobile Hamburger Toggle Button (Now on the left) -->
+          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex space-x-8">
+            <a class="text-gray-700 hover:text-black transition-colors" href="index.html">Home</a>
+            <a class="text-gray-700 hover:text-black transition-colors" href="#about">About</a>
+            <a class="text-gray-700 hover:text-black transition-colors" href="contact.html">Contact</a>
+          </nav>
+        </div>
         
         <!-- Logo -->
         <div class="flex flex-col items-center">
@@ -31,7 +39,7 @@
           </span>
         </div>
         
-        <!-- Desktop Book Now & Mobile Hamburger Button -->
+        <!-- Desktop Book Now Button -->
         <div class="flex items-center">
           <div class="hidden md:flex items-center">
             <a class="inline-flex items-center px-4 py-2 border border-gray-800 rounded hover:bg-gray-50 transition-colors text-gray-900" href="#book-now">
@@ -39,33 +47,28 @@
               <i class="fa-solid fa-calendar-check text-sm"></i>
             </a>
           </div>
-
-          <!-- Mobile Hamburger Toggle Button -->
-          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none p-2 ml-2 cursor-pointer" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars text-2xl"></i>
-          </button>
         </div>
 
       </div>
     </div>
   </header>
 
-  <!-- Fullscreen Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-white hidden flex-col justify-between p-8 md:hidden transition-all">
-    <!-- Top Bar with Logo / Close Button -->
+  <!-- Fullscreen Mobile Menu Overlay (Transparent with Backdrop Blur) -->
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-black/60 backdrop-blur-md hidden flex-col justify-between p-8 md:hidden transition-all">
+    <!-- Top Bar with Logo / Close Button (Close button on the right) -->
     <div class="flex justify-between items-center">
-      <span class="font-serif text-xl tracking-wide text-gray-900">Vio Vacations</span>
-      <button onclick="toggleMobileMenu()" class="text-gray-900 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-gray-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
 
     <!-- Navigation Links -->
     <nav class="flex flex-col items-center space-y-6 text-center my-auto">
-      <a class="mobile-link text-2xl font-serif text-gray-800 hover:text-black transition-colors" href="index.html">Home</a>
-      <a class="mobile-link text-2xl font-serif text-gray-800 hover:text-black transition-colors" href="#about">About</a>
-      <a class="mobile-link text-2xl font-serif text-gray-800 hover:text-black transition-colors" href="contact.html">Contact</a>
-      <a class="mobile-link inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-lg shadow-md mt-4" href="#book-now">
+      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="index.html">Home</a>
+      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="#about">About</a>
+      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="contact.html">Contact</a>
+      <a class="mobile-link inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg shadow-md mt-4 hover:bg-gray-100 transition-colors" href="#book-now">
         <span class="mr-2 uppercase text-sm tracking-wider">Book Now</span>
         <i class="fa-solid fa-calendar-check text-sm"></i>
       </a>
