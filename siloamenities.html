@@ -11,12 +11,11 @@
 </head>
 <body class="font-sans antialiased text-stone-700 bg-stone-50">
 
-  <!-- Header (Matched to siloguide.html / Clean Minimalist Style) -->
+  <!-- Header -->
   <header class="fixed w-full top-0 z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex justify-between items-center h-24">
         
-        <!-- Left Side: Mobile Hamburger & Desktop Nav -->
         <div class="flex items-center space-x-6">
           <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
             <i class="fa-solid fa-bars text-xl"></i>
@@ -31,14 +30,10 @@
           </nav>
         </div>
         
-        <!-- Centered / Brand Logo -->
         <div class="flex flex-col items-center">
-          <span class="font-serif text-xl tracking-wider text-white">
-            Vio Vacations
-          </span>
+          <span class="font-serif text-xl tracking-wider text-white">Vio Vacations</span>
         </div>
         
-        <!-- Desktop Book Now Button -->
         <div class="hidden md:flex items-center">
           <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
             Book Now
@@ -71,7 +66,6 @@
   </div>
 
   <main>
-    <!-- Hero Section with Image Background -->
     <section class="relative w-full h-[60vh] min-h-[450px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
       <img src="images/silo/silo-4.jpg" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Silo Amenities">
       <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
@@ -83,10 +77,7 @@
       </div>
     </section>
 
-    <!-- Main Content Container -->
     <section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 space-y-24">
-      
-      <!-- Parking & Accessibility -->
       <div class="space-y-10">
         <div class="border-b border-stone-200 pb-4">
           <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Convenience</span>
@@ -111,7 +102,6 @@
         </div>
       </div>
 
-      <!-- Property & Outdoor Features -->
       <div class="space-y-10">
         <div class="border-b border-stone-200 pb-4">
           <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">The Property</span>
@@ -143,7 +133,6 @@
         </div>
       </div>
 
-      <!-- Interior Comforts -->
       <div class="space-y-10">
         <div class="border-b border-stone-200 pb-4">
           <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Indoors</span>
@@ -167,11 +156,38 @@
           </div>
         </div>
       </div>
-
     </section>
   </main>
 
-  <!-- Script for Mobile Menu -->
+  <!-- Unified Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="index.html" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="index.html#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="contact.html" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
   <script>
     const mobileMenu = document.getElementById('mobile-menu');
 
