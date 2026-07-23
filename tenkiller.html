@@ -66,6 +66,7 @@
   </div>
 
   <main class="pt-24">
+    <!-- Hero Section -->
     <section class="relative w-full h-[650px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
       <img src="images/silo/silo-1.jpg" srcset="images/silo/silo-1.jpg 1x, images/silo/silo-5.jpg 2x" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Silo at Lake Tenkiller">
       <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
@@ -85,141 +86,148 @@
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16 space-y-20">
+    <!-- Main 3-Column Grid Container -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
   
-      <!-- TOP ROW: About & Photos Section -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div class="w-full">
-          <img src="images/silo/silo-1.jpg" class="w-full h-96 object-cover rounded-2xl shadow-sm cursor-pointer" onclick="openLightbox(0)" alt="The Silo">
-        </div>
-        <div>
-          <h2 id="about" class="text-3xl md:text-4xl font-serif text-stone-900 mb-6">About This Retreat</h2>
-          <p class="text-stone-600 leading-relaxed text-base md:text-lg">
-            Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
-          </p>
-        </div>
-      </div>
-
-      <!-- MIDDLE ROW: Live Oak Lake Style Send Message Form (Full Width) -->
-      <div class="bg-white p-8 md:p-14 rounded-3xl border border-stone-200/60 shadow-sm max-w-5xl mx-auto">
-        <div class="mb-10 text-center">
-          <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
-          <h3 class="text-3xl font-serif text-stone-900 mt-2">Send a Message</h3>
-        </div>
+        <!-- LEFT COLUMN: About & Contact Form stacked vertically (Spans 2 columns) -->
+        <div class="lg:col-span-2 space-y-12">
           
-        <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
-          <input type="hidden" name="property" value="Lake Tenkiller Retreat">
+          <!-- About Section -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white p-8 md:p-10 rounded-3xl border border-stone-200/60 shadow-sm">
+            <div class="w-full">
+              <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-2xl shadow-sm cursor-pointer" onclick="openLightbox(0)" alt="The Silo">
+            </div>
+            <div>
+              <h2 id="about" class="text-3xl font-serif text-stone-900 mb-4">About This Retreat</h2>
+              <p class="text-stone-600 leading-relaxed text-base">
+                Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
+              </p>
+            </div>
+          </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Send Message Form Section (Live Oak Style, stacked below About) -->
+          <div class="bg-white p-8 md:p-12 rounded-3xl border border-stone-200/60 shadow-sm">
+            <div class="mb-8">
+              <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
+              <h3 class="text-3xl font-serif text-stone-900 mt-1">Send a Message</h3>
+            </div>
               
-            <!-- Left Side: Inputs Stacked -->
+            <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
+              <input type="hidden" name="property" value="Lake Tenkiller Retreat">
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                  
+                <!-- Left Sub-Column: Inputs -->
+                <div class="space-y-6">
+                  <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
+                    <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
+                  </div>
+                  <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
+                    <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
+                  </div>
+                  <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
+                  </div>
+                </div>
+
+                <!-- Right Sub-Column: Message Box & Send Button -->
+                <div class="flex flex-col justify-between h-full space-y-6">
+                  <div>
+                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
+                    <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
+                  </div>
+
+                  <div class="flex justify-end">
+                    <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
+                      Send
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+          <!-- Around Lake Tenkiller Local Guide Section -->
+          <div class="pt-6">
+            <h3 class="text-2xl font-serif text-stone-900 mb-6">Around Lake Tenkiller</h3>
+            <p class="text-stone-600 leading-relaxed mb-8">
+                The Silo Retreat is perfectly situated close to the area's best outdoor adventures, dining, and scenic views, making it easy to experience everything the lake has to offer.
+            </p>
+             
             <div class="space-y-6">
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
-                <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
-              </div>
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
-                <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
-              </div>
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
-                <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
-              </div>
-            </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-1">
+                        <img src="https://www.publicdomainpictures.net/pictures/380000/velka/boat-dock-lake.jpg" alt="Pine Cove Marina" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <a href="https://simonspcm.com/" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-water text-sm text-stone-400"></i> Pine Cove Marina <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Just minutes away for boat rentals, slips, and easy access to the crystal-clear waters of the lake.
+                        </p>
+                    </div>
+                </div>
 
-            <!-- Right Side: Message & Right-Aligned Send Button -->
-            <div class="flex flex-col justify-between h-full space-y-6">
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
-                <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
-              </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-2 md:order-1 space-y-2">
+                        <a href="https://www.travelok.com/listings/view.profile/id.551" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-utensils text-sm text-stone-400"></i> Big Daddy's Right On The Dam Highway <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            A beloved local favorite located near the entrance of Tenkiller State Park, famous for its hearty comfort food, burgers, and relaxed atmosphere.
+                        </p>
+                    </div>
+                    <div class="md:col-span-1 md:order-2">
+                        <img src="https://www.publicdomainpictures.net/pictures/320000/velka/restaurant-interior-15795328407J9.jpg" alt="Big Daddy's Restaurant" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                </div>
 
-              <div class="flex justify-end">
-                <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
-                  Send
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </form>
-      </div>
-
-      <!-- LOWER ROW: Around Lake Tenkiller Highlights -->
-      <div class="pt-12 border-t border-stone-200">
-        <h3 class="text-2xl md:text-3xl font-serif text-stone-900 mb-6">Around Lake Tenkiller</h3>
-        <p class="text-stone-600 leading-relaxed mb-10 max-w-3xl">
-          The Silo Retreat is perfectly situated close to the area's best outdoor adventures, dining, and scenic views, making it easy to experience everything the lake has to offer.
-        </p>
-         
-        <div class="space-y-8 max-w-5xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-            <div class="md:col-span-1">
-              <img src="https://www.publicdomainpictures.net/pictures/380000/velka/boat-dock-lake.jpg" alt="Pine Cove Marina" class="w-full h-48 object-cover rounded-xl shadow-sm">
-            </div>
-            <div class="md:col-span-2 space-y-2">
-              <a href="https://simonspcm.com/" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                <i class="fa-solid fa-water text-sm text-stone-400"></i> Pine Cove Marina <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-              </a>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Just minutes away for boat rentals, slips, and easy access to the crystal-clear waters of the lake.
-              </p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-            <div class="md:col-span-2 md:order-1 space-y-2">
-              <a href="https://www.travelok.com/listings/view.profile/id.551" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                <i class="fa-solid fa-utensils text-sm text-stone-400"></i> Big Daddy's Right On The Dam Highway <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-              </a>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                A beloved local favorite located near the entrance of Tenkiller State Park, famous for its hearty comfort food, burgers, and relaxed atmosphere.
-              </p>
-            </div>
-            <div class="md:col-span-1 md:order-2">
-              <img src="https://www.publicdomainpictures.net/pictures/320000/velka/restaurant-interior-15795328407J9.jpg" alt="Big Daddy's Restaurant" class="w-full h-48 object-cover rounded-xl shadow-sm">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-            <div class="md:col-span-1">
-              <img src="https://www.publicdomainpictures.net/pictures/650000/velka/lake-tenkiller-oklahoma.jpg" alt="Tenkiller State Park" class="w-full h-48 object-cover rounded-xl shadow-sm">
-            </div>
-            <div class="md:col-span-2 space-y-2">
-              <a href="https://www.travelok.com/state-parks/tenkiller-state-park" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                <i class="fa-solid fa-tree text-sm text-stone-400"></i> Tenkiller State Park <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-              </a>
-              <p class="text-stone-600 text-sm leading-relaxed">
-                Widely known as Oklahoma's "Heaven in the Hills," offering gorgeous hiking trails, scenic overlooks, and family-friendly recreation.
-              </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                    <div class="md:col-span-1">
+                        <img src="https://www.publicdomainpictures.net/pictures/650000/velka/lake-tenkiller-oklahoma.jpg" alt="Tenkiller State Park" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <a href="https://www.travelok.com/state-parks/tenkiller-state-park" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
+                            <i class="fa-solid fa-tree text-sm text-stone-400"></i> Tenkiller State Park <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
+                        </a>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Widely known as Oklahoma's "Heaven in the Hills," offering gorgeous hiking trails, scenic overlooks, and family-friendly recreation.
+                        </p>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- BOTTOM ROW: Availability & Reserve Your Stay Widgets Side-by-Side -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-12 border-t border-stone-200">
-        <div id="availability-section" class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/60">
-          <h3 class="text-2xl font-serif text-stone-900 mb-6 text-center">Availability</h3>
-          <div class="text-stone-400 text-center">
-            <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
-            <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
+        <!-- RIGHT COLUMN: Availability & Reserve Your Stay Widgets stacked vertically (Spans 1 column) -->
+        <div class="lg:col-span-1 space-y-8">
+          <div id="availability-section" class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-6">Availability</h3>
+            <div class="text-stone-400 text-center">
+              <div class="ownerrez-widget" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Multiple Month Calendar"></div>
+              <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+          
+          <div id="book-now" class="sticky top-28 bg-white p-6 rounded-2xl shadow-lg border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-4 text-center">Reserve Your Stay</h3>
+            <div class="bg-stone-50 border-2 border-dashed border-stone-200 rounded-xl p-6 text-center">
+              <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
+              <script src="https://app.ownerrez.com/widget.js"></script>
+            </div>
           </div>
         </div>
-        
-        <div id="book-now" class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/60">
-          <h3 class="text-2xl font-serif text-stone-900 mb-6 text-center">Reserve Your Stay</h3>
-          <div class="bg-stone-50 border-2 border-dashed border-stone-200 rounded-2xl p-6 text-center">
-            <div class="ownerrez-widget" data-propertyId="34412783a6ec4457bc1b0664f96320ce" data-widget-type="Booking/Inquiry" data-widgetId="71ae243a5d1a4faca1c9e814c2b9cae8"></div>
-            <script src="https://app.ownerrez.com/widget.js"></script>
-          </div>
-        </div>
-      </div>
 
+      </div>
     </section>
   </main>
 
