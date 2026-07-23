@@ -100,55 +100,44 @@
               </p>
             </div>
           </div>
-          
-          <div class="mt-16 pt-12 border-t border-stone-200">
-            <h3 class="text-2xl font-serif text-stone-900 mb-6">Around Lake Tenkiller</h3>
-            <p class="text-stone-600 leading-relaxed mb-10">
-                The Silo Retreat is perfectly situated close to the area's best outdoor adventures, dining, and scenic views, making it easy to experience everything the lake has to offer.
-            </p>
-             
-            <div class="space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-                    <div class="md:col-span-1">
-                        <img src="https://www.publicdomainpictures.net/pictures/380000/velka/boat-dock-lake.jpg" alt="Pine Cove Marina" class="w-full h-48 object-cover rounded-xl shadow-sm">
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <a href="https://simonspcm.com/" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                            <i class="fa-solid fa-water text-sm text-stone-400"></i> Pine Cove Marina <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-                        </a>
-                        <p class="text-stone-600 text-sm leading-relaxed">
-                            Just minutes away for boat rentals, slips, and easy access to the crystal-clear waters of the lake.
-                        </p>
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-                    <div class="md:col-span-2 md:order-1 space-y-2">
-                        <a href="https://www.travelok.com/listings/view.profile/id.551" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                            <i class="fa-solid fa-utensils text-sm text-stone-400"></i> Big Daddy's Right On The Dam Highway <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-                        </a>
-                        <p class="text-stone-600 text-sm leading-relaxed">
-                            A beloved local favorite located near the entrance of Tenkiller State Park, famous for its hearty comfort food, burgers, and relaxed atmosphere.
-                        </p>
-                    </div>
-                    <div class="md:col-span-1 md:order-2">
-                        <img src="https://www.publicdomainpictures.net/pictures/320000/velka/restaurant-interior-15795328407J9.jpg" alt="Big Daddy's Restaurant" class="w-full h-48 object-cover rounded-xl shadow-sm">
-                    </div>
-                </div>
+          <!--Custom HTML Contact Form -->
+            <div class="contact-form-wrapper bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                <h3 class="text-2xl font-serif text-stone-900 mb-6">Send Us a Message</h3>
+                
+                <form action="https://formsubmit.co/viobnb@gmail.com" method="POST" class="space-y-4">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Inquiry from Vio Vacations Website">
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
-                    <div class="md:col-span-1">
-                        <img src="https://www.publicdomainpictures.net/pictures/650000/velka/lake-tenkiller-oklahoma.jpg" alt="Tenkiller State Park" class="w-full h-48 object-cover rounded-xl shadow-sm">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-1 font-medium">Your Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900" placeholder="Jane Doe">
                     </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <a href="https://www.travelok.com/state-parks/tenkiller-state-park" target="_blank" class="text-stone-900 font-serif text-xl flex items-center gap-2 hover:underline">
-                            <i class="fa-solid fa-tree text-sm text-stone-400"></i> Tenkiller State Park <i class="fa-solid fa-arrow-up-right-from-square text-xs text-stone-400 ml-auto"></i>
-                        </a>
-                        <p class="text-stone-600 text-sm leading-relaxed">
-                            Widely known as Oklahoma's "Heaven in the Hills," offering gorgeous hiking trails, scenic overlooks, and family-friendly recreation.
-                        </p>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-1 font-medium">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900" placeholder="jane@example.com">
                     </div>
-                </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-1 font-medium">Property of Interest</label>
+                        <select name="property" class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-white">
+                            <option value="Lake Tenkiller Retreat">Lake Tenkiller Retreat</option>
+                            <option value="The Luxury Hilltop HB">The Luxury Hilltop Horseshoe Bay</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-stone-500 mb-1 font-medium">Message</label>
+                        <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900" placeholder="How can we help you plan your stay?"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs uppercase tracking-widest font-medium transition-colors cursor-pointer shadow-md">
+                        Send Message
+                    </button>
+                </form>
             </div>
           </div>
         </div>
