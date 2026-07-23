@@ -12,7 +12,7 @@
 <body class="font-sans antialiased text-stone-700 bg-stone-50">
 
   <!-- Header -->
-  <header class="fixed w-full top-0 z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+  <header class="fixed w-full top-0 z-50 bg-[#141414]/90 backdrop-blur-md border-b border-[#282828] transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex justify-between items-center h-24">
         
@@ -35,6 +35,185 @@
         </div>
         
         <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-[#141414] border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-[#141414]/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html#about">About</a>
+      <a class="mobile-link text-xl font-serif text-white hover:text-white transition-colors" href="siloamenities.html">Amenities</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="siloguide.html">Local Guide</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="contact.html">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
+        Book Now
+      </a>
+    </nav>
+    <div></div>
+  </div>
+
+  <main class="pt-24">
+    <section class="relative w-full h-[60vh] min-h-[450px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
+      <img src="images/silo/silo-4.jpg" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Silo Amenities">
+      <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
+      
+      <div class="relative z-10 px-4 max-w-4xl mx-auto space-y-4 mt-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-stone-300 font-medium">Thoughtful Features</span>
+        <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide">Amenities & Services</h1>
+        <div class="w-12 h-[1px] bg-white/60 mx-auto mt-4"></div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 space-y-24">
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Convenience</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Parking & Space</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-truck-pickup"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Ample Boat & Trailer Parking</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Bring your water toys and utility trailers! We offer generous, hassle-free on-site parking so you can maneuver and store your gear with ease.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Minutes to Marinas</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Quick and convenient access to boat ramps, Pine Cove Marina, Strayhorn Marina, and Tenkiller State Park.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">The Property</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Outdoor & Living</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Unique Architecture</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">A striking three-bedroom luxury silo home delivering a one-of-a-kind visual and cozy living experience.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Outdoor Fire Pit</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Gather around the private outdoor fire pit under the clear Oklahoma evening sky to unwind after a day on the lake.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">BBQ Grill & Space</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Fire up the BBQ grill and enjoy open-air dining in the quiet, private outdoor relaxation spaces surrounding the property.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Indoors</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Modern Comforts</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Open-Concept Living</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Spacious indoor layout outfitted with high-end furnishings that seamlessly blend modern luxury with rustic charm.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Seamless Essentials</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Equipped with all the essential modern conveniences to make your vacation seamless, relaxing, and completely unforgettable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="index.html" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="index.html#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="contact.html" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  </script>
+</body>
+</html>        <div class="hidden md:flex items-center">
           <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
             Book Now
           </a>
