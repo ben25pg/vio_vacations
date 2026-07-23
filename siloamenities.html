@@ -3,45 +3,45 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Amenities & Parking | The Silo at Lake Tenkiller</title>
+  <title>Services & Amenities | The Silo at Lake Tenkiller</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
+<body class="font-sans antialiased text-stone-700 bg-stone-50">
 
-  <!-- Header -->
-  <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+  <!-- Header (Live Oak Lake Style: Minimalist & Clean) -->
+  <header class="fixed w-full top-0 z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
         
         <!-- Left Side: Mobile Hamburger & Desktop Nav -->
-        <div class="flex items-center space-x-4">
-          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-800 focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
-            <i class="fa-solid fa-bars text-2xl"></i>
+        <div class="flex items-center space-x-6">
+          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
           </button>
 
-          <nav class="hidden md:flex space-x-6">
-            <a class="text-gray-700 hover:text-black transition-colors" href="index.html">Home</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="index.html#about">About</a>
-            <a class="text-black font-medium transition-colors" href="siloamenities.html">Amenities</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="siloguide.html">Local Guide</a>
-            <a class="text-gray-700 hover:text-black transition-colors" href="contact.html">Contact</a>
+          <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/90">
+            <a class="hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="hover:text-white transition-colors" href="index.html#about">About</a>
+            <a class="text-white border-b border-white pb-1" href="siloamenities.html">Amenities</a>
+            <a class="hover:text-white transition-colors" href="siloguide.html">Local Guide</a>
+            <a class="hover:text-white transition-colors" href="contact.html">Contact</a>
           </nav>
         </div>
         
-        <!-- Logo -->
+        <!-- Centered / Brand Logo -->
         <div class="flex flex-col items-center">
-          <img src="vio-vacations-logo.svg" alt="Vio Vacations Logo" class="w-10 h-auto object-contain">
-          <span class="font-serif text-lg mt-1 tracking-wide text-gray-900">Vio Vacations</span>
+          <span class="font-serif text-xl tracking-wider text-white">
+            Vio Vacations
+          </span>
         </div>
         
         <!-- Desktop Book Now Button -->
         <div class="hidden md:flex items-center">
-          <a class="inline-flex items-center px-4 py-2 border border-gray-800 rounded hover:bg-gray-50 transition-colors text-gray-900" href="index.html#book-now">
-            <span class="mr-2 uppercase text-sm tracking-wider">Book Now</span>
-            <i class="fa-solid fa-calendar-check text-sm"></i>
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
+            Book Now
           </a>
         </div>
       </div>
@@ -49,126 +49,123 @@
   </header>
 
   <!-- Fullscreen Mobile Menu Overlay -->
-  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-black/60 backdrop-blur-md hidden flex-col justify-between p-8 md:hidden transition-all">
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-stone-950/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
     <div class="flex justify-between items-center">
       <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
-      <button onclick="toggleMobileMenu()" class="text-white hover:text-gray-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
 
     <nav class="flex flex-col items-center space-y-6 text-center my-auto">
-      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="index.html">Home</a>
-      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="index.html#about">About</a>
-      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="siloamenities.html">Amenities</a>
-      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="siloguide.html">Local Guide</a>
-      <a class="mobile-link text-2xl font-serif text-white hover:text-gray-200 transition-colors" href="contact.html">Contact</a>
-      <a class="mobile-link inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-lg shadow-md mt-4 hover:bg-gray-100 transition-colors" href="index.html#book-now">
-        <span class="mr-2 uppercase text-sm tracking-wider">Book Now</span>
-        <i class="fa-solid fa-calendar-check text-sm"></i>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html#about">About</a>
+      <a class="mobile-link text-xl font-serif text-white hover:text-white transition-colors" href="siloamenities.html">Amenities</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="siloguide.html">Local Guide</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="contact.html">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-stone-900 rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="index.html#book-now">
+        Book Now
       </a>
     </nav>
     <div></div>
   </div>
 
-  <main class="pt-20">
-    <!-- Page Header / Hero -->
-    <section class="bg-gray-900 text-white py-16 text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-serif tracking-wide mb-4">Retreat Amenities & Features</h1>
-      <p class="text-gray-300 max-w-2xl mx-auto text-lg">
-        Everything you need for a comfortable, stress-free stay at Lake Tenkiller—including specialized space for your lake toys and trailers.
-      </p>
+  <main>
+    <!-- Hero Section with Image Background (Live Oak Lake Style) -->
+    <section class="relative w-full h-[60vh] min-h-[450px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
+      <img src="images/silo/silo-1.jpg" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Silo Amenities">
+      <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
+      
+      <div class="relative z-10 px-4 max-w-4xl mx-auto space-y-4 mt-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-stone-300 font-medium">Thoughtful Features</span>
+        <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide">Amenities & Services</h1>
+        <div class="w-12 h-[1px] bg-white/60 mx-auto mt-4"></div>
+      </div>
     </section>
 
-    <!-- Main Amenities Grid -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+    <!-- Main Content Container (Earthy, Open Live Oak Lake Aesthetic) -->
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 space-y-24">
       
-      <!-- Highlight Feature: Parking (Placed prominently at top) -->
-      <div class="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-        <div class="lg:col-span-1 bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
-          <div class="text-gray-900 text-5xl mb-4">
-            <i class="fa-solid fa-truck-pickup"></i>
-          </div>
-          <h3 class="font-serif text-xl text-gray-900">Hassle-Free Parking</h3>
+      <!-- Parking & Accessibility -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Convenience</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Parking & Space</h2>
         </div>
-        <div class="lg:col-span-2 space-y-3">
-          <span class="text-xs uppercase tracking-widest font-semibold text-gray-500">Major Property Perk</span>
-          <h2 class="text-3xl font-serif text-gray-900">Ample Boat, Trailer & Vehicle Parking</h2>
-          <p class="text-gray-600 leading-relaxed text-lg">
-            Bringing boats, canoes, kayaks, or utility trailers? A common pain point around Lake Tenkiller is tight driveways and lack of space. The Silo features generous, open-air parking directly on-site, letting you easily maneuver and store your gear without any hassle.
-          </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-truck-pickup"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Ample Boat & Trailer Parking</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Bring your water toys and utility trailers! We offer generous, hassle-free on-site parking so you can maneuver and store your gear with ease.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Minutes to Marinas</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Quick and convenient access to boat ramps, Pine Cove Marina, Strayhorn Marina, and Tenkiller State Park.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Other Property Amenities Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Feature 1 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-house-chimney"></i>
-          </div>
-          <h3 class="font-serif text-xl text-gray-900">Unique Architecture</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            A striking three-bedroom luxury silo home delivering a one-of-a-kind visual and cozy living experience.
-          </p>
+      <!-- Property & Outdoor Features -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">The Property</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Outdoor & Living</h2>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-fire"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Unique Architecture</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">A striking three-bedroom luxury silo home delivering a one-of-a-kind visual and cozy living experience.</p>
           </div>
-          <h3 class="font-serif text-xl text-gray-900">Outdoor Fire Pit</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Gather around the private outdoor fire pit under the clear Oklahoma evening sky to unwind after a day on the lake.
-          </p>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Outdoor Fire Pit</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Gather around the private outdoor fire pit under the clear Oklahoma evening sky to unwind after a day on the lake.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">BBQ Grill & Space</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Fire up the BBQ grill and enjoy open-air dining in the quiet, private outdoor relaxation spaces surrounding the property.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interior Comforts -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Indoors</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Modern Comforts</h2>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-utensils"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Open-Concept Living</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Spacious indoor layout outfitted with high-end furnishings that seamlessly blend modern luxury with rustic charm.</p>
           </div>
-          <h3 class="font-serif text-xl text-gray-900">BBQ Grill & Space</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Fire up the BBQ grill and enjoy open-air dining in the quiet, private outdoor relaxation spaces surrounding the property.
-          </p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-couch"></i>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Seamless Essentials</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Equipped with all the essential modern conveniences to make your vacation seamless, relaxing, and completely unforgettable.</p>
           </div>
-          <h3 class="font-serif text-xl text-gray-900">Open-Concept Living</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Spacious indoor layout outfitted with high-end furnishings that seamlessly blend modern luxury with rustic charm.
-          </p>
         </div>
-
-        <!-- Feature 5 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <h3 class="font-serif text-xl text-gray-900">Minutes to Marinas</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Quick and convenient access to local boat ramps, Pine Cove Marina, Strayhorn Marina, and Tenkiller State Park.
-          </p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm space-y-3">
-          <div class="text-gray-800 text-2xl">
-            <i class="fa-solid fa-wifi"></i>
-          </div>
-          <h3 class="font-serif text-xl text-gray-900">Modern Comforts</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            Equipped with all the essential conveniences to make your vacation seamless, relaxing, and completely unforgettable.
-          </p>
-        </div>
-
       </div>
 
     </section>
