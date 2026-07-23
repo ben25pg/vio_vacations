@@ -90,11 +90,10 @@
     <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
   
-        <!-- LEFT COLUMN: About & Contact Form stacked vertically (Spans 2 columns) -->
-        <div class="lg:col-span-2 space-y-12">
-          
-          <!-- About Section -->
-         <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white p-8 md:p-10 rounded-3xl border border-stone-200/60 shadow-sm"> -->
+          <!-- LEFT COLUMN: About & Contact Form stacked vertically (Spans 2 columns) -->
+          <div class="lg:col-span-2 space-y-12">
+            
+            <!-- About Section -->
             <div class="w-full">
               <img src="images/silo/silo-1.jpg" class="w-full h-80 object-cover rounded-2xl shadow-sm cursor-pointer" onclick="openLightbox(0)" alt="The Silo">
             </div>
@@ -104,59 +103,57 @@
                 Welcome to The Silo at Lake Tenkiller, a one-of-a-kind luxury retreat where breathtaking architecture meets the tranquility of the Oklahoma outdoors. This uniquely designed, three-bedroom silo home features an open-concept living space with high-end furnishings, seamlessly blending modern comfort with charm. Outside, guests can gather around the fire pit, fire up the BBQ, or unwind in the quiet, relaxing outdoor space.
               </p>
             </div>
-        <!--  </div> -->
-
-          <!-- Send Message Form Section (stacked below About) -->
-        <!--  <div class="bg-white p-8 md:p-12 rounded-3xl border border-stone-200/60 shadow-sm"> -->
-            <div class="mb-8">
-              <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
-              <h3 class="text-3xl font-serif text-stone-900 mt-1">Send a Message</h3>
-            </div>
-              
-            <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
-              <input type="text" name="_honey" style="display:none">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
-              <input type="hidden" name="property" value="Lake Tenkiller Retreat">
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                  
-                <!-- Left Sub-Column: Inputs -->
-                <div class="space-y-6">
-                  <div>
-                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
-                    <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
-                  </div>
-                  <div>
-                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
-                    <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
-                  </div>
-                  <div>
-                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
-                    <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
-                  </div>
-                </div>
-
-                <!-- Right Sub-Column: Message Box & Send Button -->
-                <div class="flex flex-col justify-between h-full space-y-6">
-                  <div>
-                    <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
-                    <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
-                  </div>
-
-                  <div class="flex justify-end">
-                    <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
-                      Send
-                    </button>
-                  </div>
-                </div>
-
+          
+            <!-- Send Message Form Section (with mt-16 for spacing) -->
+            <div class="mt-16">
+              <div class="mb-8">
+                <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
+                <h3 class="text-3xl font-serif text-stone-900 mt-1">Send a Message</h3>
               </div>
-            </form>
+                
+              <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
+                <input type="hidden" name="property" value="Lake Tenkiller Retreat">
+          
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    
+                  <!-- Left Sub-Column: Inputs -->
+                  <div class="space-y-6">
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
+                      <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
+                      <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
+                      <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
+                    </div>
+                  </div>
+          
+                  <!-- Right Sub-Column: Message Box & Send Button -->
+                  <div class="flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
+                      <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
+                    </div>
+          
+                    <div class="flex justify-end">
+                      <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
+                        Send
+                      </button>
+                    </div>
+                  </div>
+          
+                </div>
+              </form>
+            </div>
+          
           </div>
-          <!--  </div>
-          </div> -->
-       <!-- </div> -->
 
         <!-- RIGHT COLUMN: Availability & Reserve Your Stay Widgets stacked vertically (Spans 1 column) -->
         <div class="lg:col-span-1 space-y-8">
