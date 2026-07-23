@@ -12,7 +12,7 @@
 <body class="bg-stone-50 text-stone-700 font-sans antialiased">
 
     <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-stone-900/40 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <header class="fixed w-full top-0 z-50 bg-[#141414]/90 backdrop-blur-md border-b border-[#282828] transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-24">
             <div class="flex items-center space-x-6">
                 <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
@@ -30,11 +30,121 @@
             </div>
             
             <div class="hidden md:flex items-center">
-                <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#check-availability">
+                <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-[#141414] border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="index.html#check-availability">
                     Book Now
                 </a>
             </div>
         </div>
+    </header>
+
+    <!-- Fullscreen Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[150] bg-[#141414]/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
+        <div class="flex justify-between items-center">
+            <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+            <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+            <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html">Home</a>
+            <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="index.html#about">About</a>
+            <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="contact.html">Contact</a>
+            <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="index.html#check-availability">
+                Book Now
+            </a>
+        </nav>
+        <div></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="contact-main pt-36 pb-24 px-6 lg:px-12">
+        <div class="contact-container max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            
+            <div class="contact-info space-y-6">
+                <span class="text-xs uppercase tracking-[0.3em] text-stone-400 font-medium">Get in Touch</span>
+                <h1 class="text-4xl md:text-5xl font-serif text-stone-900">We Are Here to Help</h1>
+                <p class="subtitle font-serif italic text-xl text-stone-600">A Sanctuary for the Modern Traveler</p>
+                
+                <p class="description text-stone-600 leading-relaxed text-base">
+                    Whether you are planning your escape to The Luxury Hilltop at Horseshoe Bay or seeking details about the Silo Retreat at Lake Tenkiller, we are here to help curate your experience.
+                </p>
+
+                <div class="details space-y-4 pt-6 border-t border-stone-200">
+                    <div class="detail-item">
+                        <span class="label text-xs uppercase tracking-widest text-stone-400 block mb-1">Inquiries & Booking</span>
+                        <a href="mailto:viobnb@gmail.com" class="text-lg text-stone-900 underline underline-offset-4">viobnb@gmail.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label text-xs uppercase tracking-widest text-stone-400 block mb-1">Connect Online</span>
+                        <p class="text-stone-600 text-sm">Message us directly via our property pages or social channels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                <div id="book-now" class="ownerrez-widget" data-widget-type="Contact form - Booking/Inquiry" data-widgetId="db84d4c992ea4b288adc127879cfcb56"></div>
+                <script src="https://app.ownerrez.com/widget.js" async></script>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#141414] text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+            <div>
+                <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+                <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+            </div>
+            <div class="flex flex-col space-y-3">
+                <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+                <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+                    <a href="index.html" class="hover:text-stone-300 transition-colors">Home</a>
+                    <a href="index.html#about" class="hover:text-stone-300 transition-colors">About</a>
+                    <a href="contact.html" class="hover:text-stone-300 transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="flex flex-col items-center md:items-end space-y-3">
+                <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+                <div class="flex space-x-4 text-xl">
+                    <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+            &copy; 2026 Vio Vacations. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMobileMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    </script>
+</body>
+</html>        </div>
     </header>
 
     <!-- Fullscreen Mobile Menu Overlay -->
