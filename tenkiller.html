@@ -102,52 +102,58 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="mb-8">
-            <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
-            <h3 class="text-3xl font-serif text-stone-900 mt-1">Send a Message</h3>
+          </div> <!-- Closes the grid-cols-1 md:grid-cols-2 about section above -->
+
+          <!-- Standalone Lower Contact Section (Live Oak Lake Style Layout) -->
+          <div class="mt-20 pt-16 border-t border-stone-200">
+              <div class="max-w-2xl mx-auto bg-white p-10 md:p-14 rounded-3xl border border-stone-200/60 shadow-sm">
+                  <div class="mb-8 text-center">
+                      <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
+                      <h3 class="text-3xl font-serif text-stone-900 mt-2">Send a Message</h3>
+                  </div>
+                  
+                  <form action="https://formsubmit.co/viobnb@gmail.com" method="POST" class="space-y-6">
+                      <!-- Anti-spam & Config Fields -->
+                      <input type="text" name="_honey" style="display:none">
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
+
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          <div>
+                              <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
+                              <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
+                          </div>
+                          <div>
+                              <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
+                              <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
+                          </div>
+                      </div>
+
+                      <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email Address</label>
+                          <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
+                      </div>
+
+                      <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Property of Interest</label>
+                          <select name="property" class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors">
+                              <option value="Lake Tenkiller Retreat">Lake Tenkiller Retreat</option>
+                              <option value="The Luxury Hilltop HB">The Luxury Hilltop Horseshoe Bay</option>
+                              <option value="General Inquiry">General Inquiry</option>
+                          </select>
+                      </div>
+
+                      <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
+                          <textarea name="message" rows="5" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="How can we help you plan your stay?"></textarea>
+                      </div>
+
+                      <button type="submit" class="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
+                          Send
+                      </button>
+                  </form>
+              </div>
           </div>
-              
-          <form action="https://formsubmit.co/viobnb@gmail.com" method="POST" class="space-y-6">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
-                <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
-              </div>
-              <div>
-                <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
-                <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email Address</label>
-              <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
-            </div>
-
-            <div>
-              <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Property of Interest</label>
-              <select name="property" class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors">
-                <option value="Lake Tenkiller Retreat">Lake Tenkiller Retreat</option>
-                <option value="The Luxury Hilltop HB">The Luxury Hilltop Horseshoe Bay</option>
-                <option value="General Inquiry">General Inquiry</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
-              <textarea name="message" rows="5" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="How can we help you plan your stay?"></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
-              Send
-            </button>
-        </form>
-      </div>
 
         <!-- RIGHT COLUMN: Widgets Sidebar (Spans 1 column) -->
         <div class="lg:col-span-1 space-y-8">
