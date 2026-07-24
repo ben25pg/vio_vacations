@@ -53,7 +53,7 @@
     </div>
 
     <nav class="flex flex-col items-center space-y-6 text-center my-auto">
-      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/index/" onclick="toggleMenu()">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/" onclick="toggleMenu()">Home</a>
       <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="#about" onclick="toggleMenu()">About</a>
       <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/contact/" onclick="toggleMenu()">Contact</a>
       <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="#check-availability" onclick="toggleMenu()">
@@ -65,11 +65,11 @@
 
   <section class="relative h-[600px] overflow-hidden pt-24">
     <div class="slideshow">
-      <div class="slide" style="background-image: url('images/property-1.jpg');"></div>
-      <div class="slide" style="background-image: url('images/property-2.jpg');"></div>
-      <div class="slide" style="background-image: url('images/property-3.jpg');"></div>
-      <div class="slide" style="background-image: url('images/property-4.jpg');"></div>
-      <div class="slide" style="background-image: url('images/property-5.jpeg');"></div>
+      <div class="slide" style="background-image: url('/images/property-1.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-2.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-3.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-4.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-5.jpeg');"></div>
     </div>
     <div class="absolute inset-0 bg-black/30 z-0"></div> 
   </section>
@@ -114,7 +114,7 @@
   <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <button onclick="openGallery('tenkiller')" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
-        <img alt="Lake Tenkiller Retreats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/silo/silo-1.jpg" />
+        <img alt="Lake Tenkiller Retreats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/silo/silo-1.jpg" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
           <h3 class="font-serif text-3xl mb-1">Lake Tenkiller Retreat</h3>
           <p class="text-gray-300 text-sm tracking-wide font-light">Tranquil escapes in the heart of nature.</p>
@@ -122,7 +122,7 @@
       </button>
     
       <button onclick="openGallery('hilltop')" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
-        <img alt="Lux Hilltop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="images/hilltopHB/hilltop-1.jpg"/>
+        <img alt="Lux Hilltop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/hilltopHB/hilltop-1.jpg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
           <h3 class="font-serif text-3xl mb-1">The Luxury Hilltop HB</h3>
           <p class="text-gray-300 text-sm tracking-wide font-light">Exclusive stay in Horseshoe Bay.</p>
@@ -141,7 +141,7 @@
       <div class="flex flex-col space-y-3">
         <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
         <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
-          <a href="/index/" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="/" class="hover:text-stone-300 transition-colors">Home</a>
           <a href="#about" class="hover:text-stone-300 transition-colors">About</a>
           <a href="/contact/" class="hover:text-stone-300 transition-colors">Contact</a>
         </div>
@@ -162,8 +162,8 @@
 
   <script>
     const galleries = {
-      tenkiller: ['images/silo/silo-1.jpg', 'images/silo/silo-2.jpg', 'images/silo/silo-3.jpg', 'images/silo/silo-4.jpg', 'images/silo/silo-5.jpg', 'images/silo/silo-6.jpg', 'images/silo/silo-7.jpg', 'images/silo/silo-8.jpg', 'images/silo/silo-9.jpg', 'images/silo/silo-10.jpg', 'images/silo/silo-11.jpg', 'images/silo/silo-12.jpg', 'images/silo/silo-13.jpg', 'images/silo/silo-14.jpg', 'images/silo/silo-15.jpg', 'images/silo/silo-16.jpg', 'images/silo/silo-17.jpg', 'images/silo/silo-18.jpg', 'images/silo/silo-19.jpg', 'images/silo/silo-20.jpg', 'images/silo/silo-21.jpg', 'images/silo/silo-22.jpg', 'images/silo/silo-23.jpg', 'images/silo/silo-24.jpg', 'images/silo/silo-25.jpg', 'images/silo/silo-26.jpg', 'images/silo/silo-27.jpg', 'images/silo/silo-28.jpg', 'images/silo/silo-29.jpg', 'images/silo/silo-30.jpg', 'images/silo/silo-31.jpg', 'images/silo/silo-32.jpg', 'images/silo/silo-33.jpg' ,'images/silo/silo-34.jpg', 'images/silo/silo-35.jpg', 'images/silo/silo-36.jpg', 'images/silo/silo-37.jpg'], 
-      hilltop: ['images/hilltopHB/hilltop-1.jpg', 'images/hilltopHB/hilltop-2.jpg', 'images/hilltopHB/hilltop-3.jpg', 'images/hilltopHB/hilltop-4.jpg', 'images/hilltopHB/hilltop-5.jpg', 'images/hilltopHB/hilltop-6.jpg', 'images/hilltopHB/hilltop-7.jpg', 'images/hilltopHB/hilltop-8.jpg', 'images/hilltopHB/hilltop-9.jpg', 'images/hilltopHB/hilltop-10.jpg', 'images/hilltopHB/hilltop-11.jpg', 'images/hilltopHB/hilltop-12.jpg', 'images/hilltopHB/hilltop-13.jpg', 'images/hilltopHB/hilltop-14.jpg', 'images/hilltopHB/hilltop-15.jpg', 'images/hilltopHB/hilltop-16.jpg', 'images/hilltopHB/hilltop-17.jpg', 'images/hilltopHB/hilltop-18.jpg', 'images/hilltopHB/hilltop-19.jpg', 'images/hilltopHB/hilltop-20.jpg', 'images/hilltopHB/hilltop-21.jpg', 'images/hilltopHB/hilltop-22.jpg', 'images/hilltopHB/hilltop-23.jpg', 'images/hilltopHB/hilltop-24.jpg', 'images/hilltopHB/hilltop-25.jpg', 'images/hilltopHB/hilltop-26.jpg']
+      tenkiller: ['/images/silo/silo-1.jpg', '/images/silo/silo-2.jpg', '/images/silo/silo-3.jpg', '/images/silo/silo-4.jpg', '/images/silo/silo-5.jpg', '/images/silo/silo-6.jpg', '/images/silo/silo-7.jpg', '/images/silo/silo-8.jpg', '/images/silo/silo-9.jpg', '/images/silo/silo-10.jpg', '/images/silo/silo-11.jpg', '/images/silo/silo-12.jpg', '/images/silo/silo-13.jpg', '/images/silo/silo-14.jpg', '/images/silo/silo-15.jpg', '/images/silo/silo-16.jpg', '/images/silo/silo-17.jpg', '/images/silo/silo-18.jpg', '/images/silo/silo-19.jpg', '/images/silo/silo-20.jpg', '/images/silo/silo-21.jpg', '/images/silo/silo-22.jpg', '/images/silo/silo-23.jpg', '/images/silo/silo-24.jpg', '/images/silo/silo-25.jpg', '/images/silo/silo-26.jpg', '/images/silo/silo-27.jpg', '/images/silo/silo-28.jpg', '/images/silo/silo-29.jpg', '/images/silo/silo-30.jpg', '/images/silo/silo-31.jpg', '/images/silo/silo-32.jpg', '/images/silo/silo-33.jpg' ,'/images/silo/silo-34.jpg', '/images/silo/silo-35.jpg', '/images/silo/silo-36.jpg', '/images/silo/silo-37.jpg'], 
+      hilltop: ['/images/hilltopHB/hilltop-1.jpg', '/images/hilltopHB/hilltop-2.jpg', '/images/hilltopHB/hilltop-3.jpg', '/images/hilltopHB/hilltop-4.jpg', '/images/hilltopHB/hilltop-5.jpg', '/images/hilltopHB/hilltop-6.jpg', '/images/hilltopHB/hilltop-7.jpg', '/images/hilltopHB/hilltop-8.jpg', '/images/hilltopHB/hilltop-9.jpg', '/images/hilltopHB/hilltop-10.jpg', '/images/hilltopHB/hilltop-11.jpg', '/images/hilltopHB/hilltop-12.jpg', '/images/hilltopHB/hilltop-13.jpg', '/images/hilltopHB/hilltop-14.jpg', '/images/hilltopHB/hilltop-15.jpg', '/images/hilltopHB/hilltop-16.jpg', '/images/hilltopHB/hilltop-17.jpg', '/images/hilltopHB/hilltop-18.jpg', '/images/hilltopHB/hilltop-19.jpg', '/images/hilltopHB/hilltop-20.jpg', '/images/hilltopHB/hilltop-21.jpg', '/images/hilltopHB/hilltop-22.jpg', '/images/hilltopHB/hilltop-23.jpg', '/images/hilltopHB/hilltop-24.jpg', '/images/hilltopHB/hilltop-25.jpg', '/images/hilltopHB/hilltop-26.jpg']
     };
   
     let currentGallery = [];
