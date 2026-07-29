@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Luxury Hilltop Horseshoe Bay | Vio Vacations</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased text-stone-700 bg-stone-50">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-[#141414]/90 backdrop-blur-md border-b border-[#282828] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
+        
+        <div class="flex items-center space-x-6">
+          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+
+          <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/90">
+            <a class="hover:text-white transition-colors" href="../">Home</a>
+            <a class="hover:text-white transition-colors" href="#about">About</a>
+            <a class="hover:text-white transition-colors" href="/contact/">Contact</a>
+          </nav>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-xl tracking-wider text-white">Vio Vacations</span>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-[#141414] border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="#book-now">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-[#141414]/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="../">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="#about">About</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/contact/">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="#book-now">
+        Book Now
+      </a>
+    </nav>
+    <div></div>
+  </div>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative w-full h-[650px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
+      <img src="/images/hilltopHB/hilltop-1.jpg" srcset="/images/hilltopHB/hilltop-1.jpg 1x, /images/hilltopHB/hilltop-5.jpg 2x" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="The Luxury Hilltop Horseshoe Bay">
+      <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
+      
+      <div class="relative z-10 px-4 max-w-4xl mx-auto flex flex-col items-center space-y-6">
+        <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide">The Luxury Hilltop Horseshoe Bay</h1>
+        
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+          <a href="#availability-section" class="bg-white/10 hover:bg-white text-white hover:text-stone-900 border border-white/30 px-6 py-3 rounded-full shadow-lg font-medium transition-all backdrop-blur-sm flex items-center gap-2 text-xs uppercase tracking-widest">
+            <i class="fa-solid fa-calendar-days"></i> Check Availability
+          </a>
+          
+          <button onclick="openLightbox(0)" class="bg-white text-stone-900 px-6 py-3 rounded-full shadow-lg font-semibold hover:bg-stone-100 transition-all flex items-center gap-2 cursor-pointer text-xs uppercase tracking-widest">
+            <i class="fa-solid fa-images"></i> View Gallery
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main 3-Column Grid Container -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+  
+          <!-- LEFT COLUMN: About & Contact Form stacked vertically (Spans 2 columns) -->
+          <div class="lg:col-span-2 space-y-12">
+            
+            <!-- About Section -->
+            <div class="w-full">
+              <img src="/images/hilltopHB/hilltop-1.jpg" class="w-full h-80 object-cover rounded-2xl shadow-sm cursor-pointer" onclick="openLightbox(0)" alt="The Luxury Hilltop Horseshoe Bay">
+            </div>
+            <div>
+              <h2 id="about" class="text-3xl font-serif text-stone-900 mb-4">About This Retreat</h2>
+              <h3 class="text-xl font-serif text-stone-600 mb-6 italic">Experience Elevated Lakefront Living at Horseshoe Bay.</h3>
+              <p class="text-stone-600 leading-relaxed text-base">
+                Perched high above the water to capture breathtaking, panoramic views, The Luxury Hilltop HB is a masterclass in lakeside sophistication. Whether seeking a serene personal escape or a spacious family haven, our retreat provides the perfect balance of refined luxury and effortless comfort.
+                Wake up to the gentle light of the morning shimmering across the bay, then step out onto our expansive private deck to enjoy your coffee with a view. Inside, you’ll find thoughtfully curated interiors—a seamless blend of modern elegance and cozy warmth designed to make you feel right at home the moment you arrive.
+                From quiet sunset evenings on the hilltop to refreshing afternoons by the scenic pool, this is more than just a stay—it is the destination. Experience the pinnacle of Horseshoe Bay living, where every detail is crafted to ensure your time here is nothing short of extraordinary.
+              </p>
+            </div>
+          
+            <!-- Send Message Form Section -->
+            <div class="mt-16">
+              <div class="mb-8">
+                <span class="text-xs uppercase tracking-[0.25em] text-stone-400 font-medium">Get in Touch</span>
+                <h3 class="text-3xl font-serif text-stone-900 mt-1">Send a Message</h3>
+              </div>
+                
+              <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Inquiry from The Luxury Hilltop Horseshoe Bay Page">
+                <input type="hidden" name="property" value="The Luxury Hilltop Horseshoe Bay">
+          
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    
+                  <!-- Left Sub-Column: Inputs -->
+                  <div class="space-y-6">
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
+                      <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
+                      <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
+                    </div>
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
+                      <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
+                    </div>
+                  </div>
+          
+                  <!-- Right Sub-Column: Message Box & Send Button -->
+                  <div class="flex flex-col justify-between h-full space-y-6">
+                    <div>
+                      <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
+                      <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
+                    </div>
+          
+                    <div class="flex justify-end">
+                      <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
+                        Send
+                      </button>
+                    </div>
+                  </div>
+          
+                </div>
+              </form>
+            </div>
+          
+          </div>
+
+        <!-- RIGHT COLUMN: Availability & Reserve Your Stay Widgets stacked vertically (Spans 1 column) -->
+        <div class="lg:col-span-1 space-y-8">
+          <div id="availability-section" class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-6">Availability</h3>
+            <div class="text-stone-400 text-center">
+              <div class="ownerrez-widget" data-propertyId="3f18840cbae340d1b67d455f8e0b9eea" data-widget-type="Multiple Month Calendar" data-widgetId="3a45a0d40a3747d780f719d24f3bbacc"></div>
+              <script type="text/javascript" src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+          
+          <div id="book-now" class="sticky top-28 bg-white p-6 rounded-2xl shadow-lg border border-stone-100">
+            <h3 class="text-2xl font-serif text-stone-900 mb-4 text-center">Reserve Your Stay</h3>
+            <div class="bg-stone-50 border-2 border-dashed border-stone-200 rounded-xl p-6 text-center">
+              <div class="ownerrez-widget" data-propertyId="3f18840cbae340d1b67d455f8e0b9eea" data-widget-type="Booking/Inquiry" data-widgetId="4fb09a4045a2419485bc976482ae8d68"></div>
+              <script src="https://app.ownerrez.com/widget.js"></script>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="../" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="/contact/" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Lightbox Overlay -->
+  <div id="image-preview" class="fixed inset-0 z-[200] bg-black/95 hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl bg-black/50 hover:bg-black w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">&times;</button>
+    <button onclick="navigateLightbox(-1)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+      <i class="fa-solid fa-chevron-left text-xl"></i>
+    </button>
+    <div class="max-w-5xl max-h-[85vh] flex items-center justify-center flex-col">
+      <img id="preview-img" src="" class="max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
+      <span id="image-counter" class="text-white/70 text-sm mt-4 font-sans tracking-wide"></span>
+    </div>
+    <button onclick="navigateLightbox(1)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white bg-black/50 hover:bg-black/80 w-12 h-12 rounded-full flex items-center justify-center transition-colors cursor-pointer z-10">
+      <i class="fa-solid fa-chevron-right text-xl"></i>
+    </button>
+  </div>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      });
+    });
+
+    // Lightbox Gallery Script
+    let activeImageIndex = 0;
+    const totalImages = 26;
+    const galleryImages = [];
+  
+    for (let i = 1; i <= totalImages; i++) {
+      galleryImages.push(`/images/hilltopHB/hilltop-${i}.jpg`);
+    }
+  
+    const previewOverlay = document.getElementById('image-preview');
+    const previewImg = document.getElementById('preview-img');
+    const imageCounter = document.getElementById('image-counter');
+  
+    function openLightbox(index) {
+      activeImageIndex = index;
+      updateLightboxImage();
+      previewOverlay.classList.remove('hidden');
+      previewOverlay.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closeLightbox() {
+      previewOverlay.classList.add('hidden');
+      previewOverlay.classList.remove('flex');
+      document.body.style.overflow = 'auto';
+    }
+  
+    function navigateLightbox(direction) {
+      activeImageIndex = (activeImageIndex + direction + galleryImages.length) % galleryImages.length;
+      updateLightboxImage();
+    }
+  
+    function updateLightboxImage() {
+      previewImg.src = galleryImages[activeImageIndex];
+      imageCounter.textContent = `${activeImageIndex + 1} / ${totalImages}`;
+    }
+  
+    document.addEventListener('keydown', function(e) {
+      if (!previewOverlay.classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+  </script>
+</body>
+</html>
