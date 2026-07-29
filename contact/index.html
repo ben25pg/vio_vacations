@@ -83,9 +83,49 @@
             </div>
 
             <div class="contact-form-wrapper bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
-                <div class="ownerrez-widget" data-widget-type="Contact form - Booking/Inquiry" data-widgetId="db84d4c992ea4b288adc127879cfcb56"></div>
+                <!--<div class="ownerrez-widget" data-widget-type="Contact form - Booking/Inquiry" data-widgetId="db84d4c992ea4b288adc127879cfcb56"></div>
                 <script src="https://app.ownerrez.com/widget.js"></script>
-                <!--<script src="https://app.ownerrez.com/widget.js" async></script>-->
+                <script src="https://app.ownerrez.com/widget.js" async></script>-->
+                <form action="https://formsubmit.co/viobnb@gmail.com" method="POST">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Inquiry from Lake Tenkiller Page">
+                    <input type="hidden" name="property" value="Lake Tenkiller Retreat">
+              
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        
+                      <!-- Left Sub-Column: Inputs -->
+                      <div class="space-y-6">
+                        <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">First Name</label>
+                          <input type="text" name="first_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Jane">
+                        </div>
+                        <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Last Name</label>
+                          <input type="text" name="last_name" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="Doe">
+                        </div>
+                        <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Email *</label>
+                          <input type="email" name="email" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors" placeholder="jane@example.com">
+                        </div>
+                      </div>
+              
+                      <!-- Right Sub-Column: Message Box & Send Button -->
+                      <div class="flex flex-col justify-between h-full space-y-6">
+                        <div>
+                          <label class="block text-xs uppercase tracking-widest text-stone-500 mb-2 font-medium">Message</label>
+                          <textarea name="message" rows="9" required class="w-full px-4 py-3.5 rounded-xl border border-stone-200 focus:outline-none focus:border-stone-900 text-sm text-stone-900 bg-stone-50/50 transition-colors resize-none" placeholder="How can we help you plan your stay?"></textarea>
+                        </div>
+              
+                        <div class="flex justify-end">
+                          <button type="submit" class="px-10 py-4 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs uppercase tracking-[0.2em] font-medium transition-colors cursor-pointer shadow-md">
+                            Send
+                          </button>
+                        </div>
+                      </div>
+              
+                    </div>
+              </form>
             </div>
 
         </div>
