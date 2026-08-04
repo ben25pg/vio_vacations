@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Services & Amenities | Lux HSB Estate</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased text-stone-700 bg-stone-50">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-[#141414]/90 backdrop-blur-md border-b border-[#282828] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
+        
+        <div class="flex items-center space-x-6">
+          <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+
+          <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/90">
+            <a class="hover:text-white transition-colors" href="/hilltop/">Home</a>
+            <a class="hover:text-white transition-colors" href="/hilltop/#about">About</a>
+            <a class="text-white border-b border-white pb-1" href="/hbamenities/">Amenities</a>
+            <a class="hover:text-white transition-colors" href="/contact/">Contact</a>
+          </nav>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-xl tracking-wider text-white">Vio Vacations</span>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-[#141414] border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="/hilltop/#book-now">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-[150] bg-[#141414]/95 backdrop-blur-xl hidden flex-col justify-between p-8 md:hidden transition-all">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMobileMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/hilltop/">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/hilltop/#about">About</a>
+      <a class="mobile-link text-xl font-serif text-white hover:text-white transition-colors" href="/hbamenities/">Amenities</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/contact/">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="/hilltop/#book-now">
+        Book Now
+      </a>
+    </nav>
+    <div></div>
+  </div>
+
+  <main class="pt-24">
+    <section class="relative w-full h-[60vh] min-h-[450px] overflow-hidden bg-stone-900 flex items-center justify-center text-center">
+      <img src="/images/hilltopHB/hilltop-9.jpg" class="absolute inset-0 w-full h-full object-cover object-center filter brightness-75" alt="Lux HSB Estate Amenities">
+      <div class="absolute inset-0 bg-stone-950/40 pointer-events-none"></div>
+      
+      <div class="relative z-10 px-4 max-w-4xl mx-auto space-y-4 mt-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-stone-300 font-medium">Thoughtful Features</span>
+        <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide">Amenities & Services</h1>
+        <div class="w-12 h-[1px] bg-white/60 mx-auto mt-4"></div>
+      </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 lg:px-12 py-20 space-y-24">
+      
+      <!-- Entertainment Wing -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Entertainment Wing</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Games & Cinema</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Home Theater</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Why go out? Sink into reclining theater seats and enjoy a private movie night with incredible sound and picture quality.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Dedicated Game Room</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">The ultimate indoor hangout spot featuring air hockey, shuffleboard, indoor cornhole, and an assortment of board games.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Property -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">The Property</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Outdoor Oasis</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Private Pool</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Escape the crowds in our sparkling private pool, surrounded by ample deck space and offering 180-degree sunset views.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">The Tree House</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Escape to the backyard treehouse, a shaded and peaceful retreat perfect for reading, relaxing, or afternoon daydreams.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">BBQ & Lounge Area</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Lounge on the spacious patio, grill up a BBQ dinner, and dine al fresco while overlooking the Texas Hill Country.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indoors / Luxury Living -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Indoors</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Luxury Living</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Grand Open Layout</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Step into a grand open-concept living space bathed in natural light, with floor-to-ceiling windows that perfectly frame the stunning landscape.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-fire-burner"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Chef’s Kitchen</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Fully stocked with stainless steel appliances, granite countertops, and plenty of space to effortlessly prepare a holiday feast.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: Everyday Conveniences -->
+      <div class="space-y-10">
+        <div class="border-b border-stone-200 pb-4">
+          <span class="text-xs uppercase tracking-[0.2em] text-stone-400 font-semibold">Essentials</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-1">Everyday Conveniences</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Coffee Bar</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Start your morning right with our dedicated coffee setup, featuring a Keurig machine, complimentary coffee pods, and a pour-over maker.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-blender"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Small Appliances</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Feel right at home with a fully equipped appliance lineup, including a crock pot, blender, and toaster for ultimate culinary convenience.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm transition-shadow hover:shadow-md">
+            <div class="text-stone-900 text-2xl mb-4">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="font-serif text-xl text-stone-900 mb-2">Seamless Stays</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">Stay seamlessly connected with fast Wi-Fi throughout the home, and pack light knowing you have full access to in-unit laundry facilities.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="/hilltop/" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="/hilltop/#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="/contact/" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  </script>
+</body>
+</html>
