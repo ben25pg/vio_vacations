@@ -97,9 +97,9 @@
   </section>
 
   <!-- Navigation Dropdown (Auto-triggers on selection) -->
-  <div id="check-availability" class="relative z-20 max-w-lg mx-auto -mt-10 bg-white/95 backdrop-blur-md p-4 border border-[#f0efe9] shadow-xl flex gap-4">
+  <div id="check-availability" class="relative z-20 max-w-lg mx-auto -mt-10 bg-white/95 backdrop-blur-md p-4 border border-[#f0efe9] shadow-xl flex gap-4 rounded-2xl">
     <div class="flex-grow w-full">
-      <select id="property-dropdown" onchange="if(this.value) window.location.href=this.value;" class="w-full px-4 py-3 border border-[#dedcd2] rounded-none bg-white focus:ring-1 focus:ring-[#1a1a1a] outline-none cursor-pointer font-sans text-sm">
+      <select id="property-dropdown" onchange="if(this.value) window.location.href=this.value;" class="w-full px-4 py-3 border border-[#dedcd2] rounded-lg bg-white focus:ring-1 focus:ring-[#1a1a1a] outline-none cursor-pointer font-sans text-sm">
         <option value="" disabled selected>Select a destination to book...</option>
         <option value="/tenkiller/">Lake Tenkiller Retreat</option>
         <option value="/hilltop/">The Luxury Hilltop HB</option>
@@ -111,7 +111,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
       <!-- Card 1: Navigates to Tenkiller Page -->
-      <a href="/tenkiller/" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
+      <a href="/tenkiller/" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg block w-full text-left cursor-pointer">
         <img alt="Lake Tenkiller Retreats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/silo/silo-1.jpg" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
           <h3 class="font-serif text-3xl mb-1">Lake Tenkiller Retreat</h3>
@@ -120,7 +120,7 @@
       </a>
     
       <!-- Card 2: Navigates to Hilltop HB Page -->
-      <a href="/hilltop/" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
+      <a href="/hilltop/" class="group relative h-80 rounded-2xl overflow-hidden shadow-lg block w-full text-left cursor-pointer">
         <img alt="Lux Hilltop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/hilltopHB/hilltop-1.jpg"/>
         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
           <h3 class="font-serif text-3xl mb-1">The Luxury Hilltop HB</h3>
