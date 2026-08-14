@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Vio Vacations</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#faf9f6] font-sans text-[#2c2c2c] antialiased">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-[#141414]/90 backdrop-blur-md border-b border-[#282828] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex justify-between items-center h-24">
+        
+        <div class="flex items-center space-x-6">
+          <button id="hamburger-btn" onclick="toggleMenu()" class="md:hidden text-white focus:outline-none p-2 cursor-pointer" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+
+          <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-white/90">
+            <a class="hover:text-white transition-colors" href="/">Home</a>
+            <a class="hover:text-white transition-colors" href="#about">About</a>
+            <a class="hover:text-white transition-colors" href="/contact/">Contact</a>
+          </nav>
+        </div>
+        
+        <div class="flex flex-col items-center">
+          <span class="font-serif text-xl tracking-wider text-white">VIO VACATIONS</span>
+        </div>
+        
+        <div class="hidden md:flex items-center">
+          <a class="inline-flex items-center px-6 py-2.5 bg-white/10 hover:bg-white text-white hover:text-[#141414] border border-white/30 rounded-full transition-all text-xs uppercase tracking-widest font-medium" href="#check-availability">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-[150] bg-[#141414]/95 backdrop-blur-xl flex-col justify-between p-8 md:hidden transition-all">
+    <div class="flex justify-between items-center">
+      <span class="font-serif text-xl tracking-wide text-white">Vio Vacations</span>
+      <button onclick="toggleMenu()" class="text-white hover:text-stone-300 text-3xl p-2 cursor-pointer" aria-label="Close Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col items-center space-y-6 text-center my-auto">
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/" onclick="toggleMenu()">Home</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="#about" onclick="toggleMenu()">About</a>
+      <a class="mobile-link text-xl font-serif text-white/80 hover:text-white transition-colors" href="/contact/" onclick="toggleMenu()">Contact</a>
+      <a class="mobile-link inline-flex items-center px-8 py-3 bg-white text-[#141414] rounded-full mt-4 text-xs uppercase tracking-widest font-medium" href="#check-availability" onclick="toggleMenu()">
+        Book Now
+      </a>
+    </nav>
+    <div></div>
+  </div>
+
+  <section class="relative h-[600px] overflow-hidden pt-24">
+    <div class="slideshow">
+      <div class="slide" style="background-image: url('/images/property-1.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-2.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-3.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-4.jpg');"></div>
+      <div class="slide" style="background-image: url('/images/property-5.jpeg');"></div>
+    </div>
+    <div class="absolute inset-0 bg-black/30 z-0"></div> 
+  </section>
+
+  <section id="about" class="py-24 px-6 md:px-12 bg-[#faf9f6] border-b border-[#f0efe9]">
+   <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+     <div class="hidden md:block md:col-span-2">
+       <div class="h-24 w-px bg-[#dedcd2] mx-auto"></div>
+     </div>
+     <div class="md:col-span-8 space-y-8">
+       <div class="space-y-2">
+         <span class="text-xs uppercase tracking-[0.3em] text-[#888] font-medium">Our Philosophy</span>
+         <h2 class="text-4xl md:text-5xl font-serif text-[#1a1a1a] leading-tight">
+           A Sanctuary for the Modern Traveler
+         </h2>
+       </div>
+       <p class="text-lg md:text-xl text-[#555] leading-relaxed font-light first-letter:text-5xl first-letter:font-serif first-letter:mr-3 first-letter:float-left">
+         At <strong>Vio Vacations</strong>, we believe your stay should be as extraordinary as the destination itself. Whether you are seeking the elevated, modern serenity of <strong>The Luxury Hilltop at Horseshoe Bay</strong> or the rustic charm of the <strong>Silo Retreat at Lake Tenkiller</strong>, our properties are curated to provide a seamless sanctuary for rest and reconnection. We are deeply committed to our local communities, partnering exclusively with area businesses for all our professional cleaning and maintenance needs. Designed for the traveler who values both comfort and intention, every detail—from our high-speed, work-friendly infrastructure to our personalized local recommendations—is crafted to ensure your escape is nothing short of restorative.
+       </p>
+       <a href="#check-availability" class="inline-block border-b border-[#1a1a1a] pb-1 text-xs uppercase tracking-[2.5px] hover:text-[#555] transition-colors">
+         Begin your journey
+       </a>
+     </div>
+   </div>
+  </section>
+
+  <!-- Navigation Dropdown (Auto-triggers on selection) -->
+  <div id="check-availability" class="relative z-20 max-w-lg mx-auto -mt-10 bg-white/95 backdrop-blur-md p-4 border border-[#f0efe9] shadow-xl flex gap-4">
+    <div class="flex-grow w-full">
+      <select id="property-dropdown" onchange="if(this.value) window.location.href=this.value;" class="w-full px-4 py-3 border border-[#dedcd2] rounded-none bg-white focus:ring-1 focus:ring-[#1a1a1a] outline-none cursor-pointer font-sans text-sm">
+        <option value="" disabled selected>Select a destination to book...</option>
+        <option value="/tenkiller/">Lake Tenkiller Retreat</option>
+        <option value="/hilltop/">The Luxury Hilltop HB</option>
+      </select>
+    </div>
+  </div>
+
+  <main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Card 1: Navigates to Tenkiller Page -->
+      <a href="/tenkiller/" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
+        <img alt="Lake Tenkiller Retreats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/silo/silo-1.jpg" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
+          <h3 class="font-serif text-3xl mb-1">Lake Tenkiller Retreat</h3>
+          <p class="text-gray-300 text-sm tracking-wide font-light">Tranquil escapes in the heart of nature.</p>
+        </div>
+      </a>
+    
+      <!-- Card 2: Navigates to Hilltop HB Page -->
+      <a href="/hilltop/" class="group relative h-80 rounded-none overflow-hidden shadow-lg block w-full text-left cursor-pointer">
+        <img alt="Lux Hilltop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/images/hilltopHB/hilltop-1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 text-white">
+          <h3 class="font-serif text-3xl mb-1">The Luxury Hilltop HB</h3>
+          <p class="text-gray-300 text-sm tracking-wide font-light">Exclusive stay in Horseshoe Bay.</p>
+        </div>
+      </a>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#141414] text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      <div>
+        <div class="font-serif text-2xl tracking-[3px] mb-2">VIO VACATIONS</div>
+        <p class="text-[#888] text-sm font-light">Curated sanctuaries for rest, intention, and reconnection.</p>
+      </div>
+      <div class="flex flex-col space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Quick Links</span>
+        <div class="flex flex-wrap justify-center md:justify-start gap-6 text-sm">
+          <a href="/" class="hover:text-stone-300 transition-colors">Home</a>
+          <a href="#about" class="hover:text-stone-300 transition-colors">About</a>
+          <a href="/contact/" class="hover:text-stone-300 transition-colors">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col items-center md:items-end space-y-3">
+        <span class="text-xs uppercase tracking-widest text-stone-400 font-semibold">Follow Us</span>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="hover:text-stone-300 transition-colors" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-[#282828] mt-12 pt-8 text-center text-xs tracking-widest text-[#666]">
+      &copy; 2026 Vio Vacations. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile menu visibility
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+  </script>
+
+</body>
+</html>
